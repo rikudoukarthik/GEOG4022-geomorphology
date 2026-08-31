@@ -2,6 +2,134 @@
 title: "Class notes"
 ---
 
-# Overview 
+# What is geomorphology?
 
-- 
+**2026-08-26**
+
+- The study of landforms and the processes that create them
+- Study of Earth's dynamic surface, its history, and its active processes
+- Around since Ancient Greece, but term coined in late 1800s
+
+> “Geomorphologists learn to observe and interpret landscapes systematically in order to understand how processes shape Earth’s surface, decipher the history of a place, and recognize (and potentially mitigate or manage) the impacts of environmental hazards on societies”
+> 
+> --- Bierman and Montgomery, 2014
+
+**Interdisciplinary science**
+
+- Synthetic science: geography, geology, physics, chemistry, biology, etc.
+- Qualitative & quantitative
+- Nexus of lithosphere (geosphere), hydrosphere, biosphere, atmosphere
+
+## Facets of geomorphology
+
+- Morphology (static)
+    - Constitution
+    - Configuration
+    - Mass flow (discharge, precipitation rate, sediment flux---still static rates of flow)
+- Dynamic variables
+    - Chemical & mechanical properties representing energy expenditure & doing of work (power, force, stress, momentum, etc.)
+    
+Beach example (in PPT)
+
+## Approaches
+
+- In US, geomorphology courses taught in both physical geography & geology departments
+- In the past, focus on description and classification of landforms to inform landscape history
+- Since 1950s (or a bit earlier in the century), push toward quantitative characterisation and understanding of *process* (especially physical and chemical processes)
+
+## Themes
+
+Lots of themes, lots of valid dichotomies
+
+- Reductionism vs synthesis
+- Quantitative vs qualitative
+- Complexity vs similarity
+- Mechanistic (process) vs event/extremal hypotheses
+- High-tech vs low-tech
+- Large vs small scales
+- Field vs lab/numerical modelling studies
+- REMOTE SENSING
+
+## Historical geomorphology
+
+- Study of landform genesis & evolution over medium to long time scales
+- WM Davis (geographer, one of founders of AAG) introduced concept of The Geographical Cycle: landscapes undergo initial and sudden uplift, then geomorphic processes continue gradually wearing down topography (increase in relief). Stages are youthful, mature, old age.
+- Especially these terminologies were very simplistic, and not very popular now.
+- Currently, relies on advanced dating techniques to reconstruct Quaternary history of a region (now--2.5mya)
+
+## Process geomorphology
+
+- Study of processes responsible for landform development & geomorphic change
+- GK Gilbert defined (1877, *Geology of Henry Mountains*) concept of **dynamic equilibrium** between driving forces and resistance of geologic structure
+    - Father of modern geomorphology: first to associate mechanical principles with geomorphic action
+    - USGS, background in physics and geology
+    - President of GSA & AAG
+- Post-Gilbert:
+    - Robert Horton: hydrophysical approaches to study fluvial systems
+    - Arthur Strahler: advocated for dynamic geomorphology
+    - 1950s--60s: explosion of quantitative process-based studies, emphasis on equilibrium (self-regulation) in fluvial systems (systems concepts)
+    - 1970s: slow shift to disequilibrium
+    - 1980s: renewed interest in systems approaches
+    - 1990s--recent: non-linear dynamics, numerical & physical modelling, sophistication of field techniques & tech
+    - Morphodynamics: study of landscape evolution as it relates to deposition and erosion of sediment (Gary Parker)
+    
+**Arguments against (1980s)**
+
+- Small scale processes, reductionism
+- Emphasis on applied (becoming nothing more than engineering)
+- "The re-enchantment of geomorphology", Vic Baker and Rollie Twidale (1991)
+
+## Reenchanctment of geomorphology
+
+- Critical of Process Geomorphology (4 main concerns)
+    - Anti-historicism (ignoring rare/extreme events)
+    - Over-reliance on physical theory (theoreticism diverts attention from observation, first step of scientific method)
+    - Increasing emphasis on applied studies: becoming engineering, application should not drive science
+    - Over-emphasis on modelling: sophistication replacing accuracy
+- Solution: **maverick geomorphology** (anomalies, creativity & discovery, non-theoretical historical studies)
+
+## Subgroups of geomorphology
+
+- Tectonic: interaction between tectonic & geomorphic processes where crust actively deforms; interest in orogenies (mountain building)
+- Climatic: some proponents suggest climatic zones (tropics, arid, etc.) engenders a distinctive suite of landforms, but highly contested, more to it (though climate does have strong influence)
+    - Physiographic provinces: at regional scales, tectonic forces and climatic conditions create distinct provinces, producing similar landforms
+- Hydro-: hydrology + geomorphology
+- Bio-/eco- (plants or animals)
+- Biomorphodynamics: biological-physical feedbacks between animals and plants and physical geomorphic processes
+- Anthropo-, submarine, planetary (lots more)
+- Exact terms don't matter, conceptual syntheses
+
+Fig 1. from Steiger & Corenblit 2012 is nice for my perspective. But Kory disagrees with bio- being only passive manipulators of Earth surface processes (also active).
+
+# Methods for Geomorphic Science
+
+**2026-08-28**
+
+## Common variables of interest
+
+- Water velocity and discharge (volumetric flow rate)
+    - Classic propeller-meters for 1d measurement
+    - Acoustic Doppler Velocimeter for 3d velocity components (at-a-point, time-series)
+    - Acoustic Doppler Current Profiler (ADCP): newer, good for larger faster sampling
+    - Large-scale particle image velocimetry (LS-PIV): originated as lab method; add some particle and measure its flow
+- Channel morphology
+    - Width, depth
+    - Bed, bedform
+    - Bankline delineation, bank roughness
+    - Direct field surveying (total station, GPS)
+    - Remote sensed: 
+    - LiDAR great for "subtracting" vegetation (aerial), also high-res imaging especially vertical (terrestrial, TLS)
+    - Drones: morphologic and sedimentological mapping
+    - Structure from mapping
+    - River bathymetry mapping: LiDAR doesn't work well with water (mostly due to sediment), but Multibeam Echo Sounding (MBES) is high-res, mount on boat and go across river; hydroacoustics, get multiple streams of info about elevation (1000 pings per swath, ADCP only 4); ADCP maps velocities, MBES maps river and coastal beds
+- Mapping subsurface
+    - Ground Penetrating Radar (GPR): cart pulled across ground
+    - Sediment and soil coring: manual hammering or vibracore (vibrating weight on top)
+        - Sizing: Dry sieving (Roto-tap) with multiple sieves, gives grain size distribution (proportional masses)
+- Numerical Morphodynamic Modelling
+- Satellite remote sensing, automated river migration methods
+
+# Endogenic Processes & Earth Basics
+
+**2026-08-31**
+
