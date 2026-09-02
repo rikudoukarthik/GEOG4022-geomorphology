@@ -129,7 +129,106 @@ Fig 1. from Steiger & Corenblit 2012 is nice for my perspective. But Kory disagr
 - Numerical Morphodynamic Modelling
 - Satellite remote sensing, automated river migration methods
 
-# Endogenic Processes & Earth Basics
+## Basic principles of Geomorphology
 
 **2026-08-31**
 
+- Systems science
+    - System: set of interrelated things linked by flows (input-output) and distinct from surrounding environment (input-output cross some boundary)
+    - Each geomorphic system (e.g., rivers) is its own system
+    - Input minus output = storage change ($I - O = \Delta ST$; Conservation Laws of Mass and Energy)
+    - Types of systems:
+        - Open: exchange both energy and matter with surrounding environment (most geomorphic systems)
+        - Closed: exchange only energy with surrounding environment (global concepts, e.g., hydrological system)
+        - Isolated: cannot exchange energy or matter with surrounding environment (theoretical concept)
+    - Feedbacks
+        - As systems operate, generate outputs that influence aspects of the system---**feedbacks**
+        - **Feedback loop**: pathway that information about system travels between various points of system (snowball vs self-regulation)
+- Uniformitarianism
+    - In late 19th century, shift from catastrophism to uniformitarianism
+    - **Catastrophism:** change by sudden, rapid, violent events (doesn't require long periods of time)
+    - **Gradualism:** slow, gradual change (long periods of time); introduced by James Hutton in *Theory of the Earth* (1795)
+    - **Uniformitarianism:** 
+        - laws of physics and natural processes operating today are same as those in past (vast, long geologic history)
+        - Charles Lyell in *Principles of Geology* (1830)
+        - includes both slow changes and major events (floods, earthquakes)
+- Principles of Equilibrium, Thresholds & Complex Response 
+    - Delicate balance between landforms and processes
+    - Always consider driving forces vs resisting forces
+    - **Steady-state:** rates of input and output are equal; system maintains time-averaged level
+    - **Metastable/Complex Response:** when system reaches some **threshold** (tipping point), it abruptly shifts to a different state which may later reach steady-state equilibrium
+    - **Dynamic:** (depends on time scale of interest) appears in steady-state over short term, but there is some trend over long term
+    - Evaluating a system's equilibrium condition requires consideration of temporal scale & capabilities to assess change over that time period
+- Process-form relationship
+    - Mediated by energy, force and resistance (driving vs resisting force)
+    - We can view a lot of our systems through the framework of what's trying to do the work and what's trying to hold it in place
+- Recurrence Intervals & Magnitude-Frequency relationships
+    - Most geomorphic change comes from discrete events of varying size and scale (therefore, magnitude)
+    - RI: average time between events of a given magnitude
+    - Aug 2016 in Baton Rouge (Lafayette to Slidell): huge flood, magnitude super high (500-1000 year event), but doesn't mean we cannot have similar in the near future
+    - Using all these in analyses (especially predicting large events) requires that the system we're modelling doesn't change in properties, but this is generally not the case
+- Landscapes based on sensitivity
+    - **Insensitive/robust:** steady-state, "buffering", system responds fast to external forces
+    - **Sensitive:** slow to response to external forces, or timing of forces faster than response; complex response
+    - Landscape Sensitivity based on transient-form ratio (mean recovery time/mean recurrence interval): larger $TF_r$ means more sensitive landscape
+    
+$$
+TF_r = \frac{t_r}{t_d}
+$$
+
+# Endogenic Processes & Earth Basics
+
+- **Endogenic:** internal processes related to movement of lithosphere (tectnoics) and/or eruption of molten rock (volcanism)
+    - Responsible generally for increasing elevation of landscapes
+    - Generally build up (driving force)
+    - Larger time scales
+- **Exogenic:** external processes related to overall wearing down of landscapes (weather, water, wind, ice)
+    - Generally wearing down (resisting force)
+
+## Geologic Time Scale
+
+**2026-09-02**
+
+- Eons --> Eras --> Periods --> Epochs
+- Precambrian eon actually has 3 eons, but largely grouped together
+- Boundaries based on key events in Earth's history (Earth's physical form, atmospheric composition, evolution/dominance of various forms of life)
+    - Precambrian-Phanerozoic boundary represents **Cambrian Explosion**: modern atmospheric composition & variety and complexity of life increased rapidly and enormously (suddenly lots of fossils)
+    - Within Phanerozoic, based on extinctions and evolution
+    - PT extinction (largest) was due to volcanic activity, not asteroid
+- Cenozoic: modern is Palaeogene, Neogene, Quaternary
+    - Pleistocene = last glaciation (2.6mya--10kya)
+    - Strong push to add Anthropocene Epoch to GTS: when? Weapons of mass destruction (mid-1900s), or *industrialisation*?
+        - Only scientific argument against: we don't know what the *lasting evidence* will be, cos no historical record as such to track
+
+## Earth's interior
+
+- Internal heat drives endogenic processes
+- Core (50%): inner is solid iron, outer is molten iron
+    - Heat from compaction during formation, and from radioactive decay
+    - Heat allows mantle elements to move (mantle convection)
+- Uppermost mantle is rigid but much denser than crust above
+- Crust vs mantle (density); lithosphere vs asthenosphere (rigidity)
+- Top 1% is crust: continental (granite; thicker; slightly less dense) & oceanic (basalt; thinner; slightly denser)
+    - **Isostasy:** adjustment of asthenosphere to lithosphere based on density-thickness differences; keeps gravity and buoyancy in equilibrium; erosion of crust might result in uplift of plate
+    - Spatial distribution of both crust types across globe different
+
+## Plate tectonics
+
+- Seven major tectonic plates
+- Only around 1960s correlational evidence among plate shapes, earthquake hotspots, and volcanic activity came together to conceptualise plate tectonics
+    - Only after WWII! With more geophysical evidence, pinpoint *how* these movements happen
+    - **How:** mantle convection + gravity
+    - Earlier concepts thought of continents as icebergs in the oceanic sea
+    - But now we know the whole lithospheric crust moves
+    - Zero sum game: volcanic activity builds material, on the other end **subduction**
+        - Gravity pulls one plate below another through subduction (usually in basaltic ocean crust); mantle convection adds new material atop the crust
+- **Tectonic boundaries:** divergent, transform, convergent
+- Continent-continent convergent boundaries: **suture zones** (no scope for subduction due to thickness, equal density) resulting in orogeny
+- Ocean-continent convergence: subduction due to oceanic being denser and thinner
+- Ocean-ocean: older colder (denser) oceanic subducts under younger 
+- When plate gets subducted: 
+    - Part of it starts melting, becomes less dense, and results in more volcanic activity
+    - The higher plate also "scrapes" off subducted plate, either forming some wedge or collecting smaller islands 
+- **Bowen's reaction series:** sequence in which minerals crystallise/melt from magma/rock
+    - High to low temperature increases silica content (earliest rocks formed have lower, latest/youngest have more silica)
+    - Silica content determines resistance to breaking down at Earth's surface (more silica, more resistant; e.g., sand on beaches)

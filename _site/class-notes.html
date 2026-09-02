@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -130,8 +159,14 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#methods-for-geomorphic-science" id="toc-methods-for-geomorphic-science" class="nav-link" data-scroll-target="#methods-for-geomorphic-science"><span class="header-section-number">2</span> Methods for Geomorphic Science</a>
   <ul class="collapse">
   <li><a href="#common-variables-of-interest" id="toc-common-variables-of-interest" class="nav-link" data-scroll-target="#common-variables-of-interest"><span class="header-section-number">2.1</span> Common variables of interest</a></li>
+  <li><a href="#basic-principles-of-geomorphology" id="toc-basic-principles-of-geomorphology" class="nav-link" data-scroll-target="#basic-principles-of-geomorphology"><span class="header-section-number">2.2</span> Basic principles of Geomorphology</a></li>
   </ul></li>
-  <li><a href="#endogenic-processes-earth-basics" id="toc-endogenic-processes-earth-basics" class="nav-link" data-scroll-target="#endogenic-processes-earth-basics"><span class="header-section-number">3</span> Endogenic Processes &amp; Earth Basics</a></li>
+  <li><a href="#endogenic-processes-earth-basics" id="toc-endogenic-processes-earth-basics" class="nav-link" data-scroll-target="#endogenic-processes-earth-basics"><span class="header-section-number">3</span> Endogenic Processes &amp; Earth Basics</a>
+  <ul class="collapse">
+  <li><a href="#geologic-time-scale" id="toc-geologic-time-scale" class="nav-link" data-scroll-target="#geologic-time-scale"><span class="header-section-number">3.1</span> Geologic Time Scale</a></li>
+  <li><a href="#earths-interior" id="toc-earths-interior" class="nav-link" data-scroll-target="#earths-interior"><span class="header-section-number">3.2</span> Earth’s interior</a></li>
+  <li><a href="#plate-tectonics" id="toc-plate-tectonics" class="nav-link" data-scroll-target="#plate-tectonics"><span class="header-section-number">3.3</span> Plate tectonics</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -317,12 +352,159 @@ ul.task-list li input[type="checkbox"] {
 <li>Satellite remote sensing, automated river migration methods</li>
 </ul>
 </section>
+<section id="basic-principles-of-geomorphology" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="basic-principles-of-geomorphology"><span class="header-section-number">2.2</span> Basic principles of Geomorphology</h2>
+<p><strong>2026-08-31</strong></p>
+<ul>
+<li>Systems science
+<ul>
+<li>System: set of interrelated things linked by flows (input-output) and distinct from surrounding environment (input-output cross some boundary)</li>
+<li>Each geomorphic system (e.g., rivers) is its own system</li>
+<li>Input minus output = storage change (<span class="math inline">\(I - O = \Delta ST\)</span>; Conservation Laws of Mass and Energy)</li>
+<li>Types of systems:
+<ul>
+<li>Open: exchange both energy and matter with surrounding environment (most geomorphic systems)</li>
+<li>Closed: exchange only energy with surrounding environment (global concepts, e.g., hydrological system)</li>
+<li>Isolated: cannot exchange energy or matter with surrounding environment (theoretical concept)</li>
+</ul></li>
+<li>Feedbacks
+<ul>
+<li>As systems operate, generate outputs that influence aspects of the system—<strong>feedbacks</strong></li>
+<li><strong>Feedback loop</strong>: pathway that information about system travels between various points of system (snowball vs self-regulation)</li>
+</ul></li>
+</ul></li>
+<li>Uniformitarianism
+<ul>
+<li>In late 19th century, shift from catastrophism to uniformitarianism</li>
+<li><strong>Catastrophism:</strong> change by sudden, rapid, violent events (doesn’t require long periods of time)</li>
+<li><strong>Gradualism:</strong> slow, gradual change (long periods of time); introduced by James Hutton in <em>Theory of the Earth</em> (1795)</li>
+<li><strong>Uniformitarianism:</strong>
+<ul>
+<li>laws of physics and natural processes operating today are same as those in past (vast, long geologic history)</li>
+<li>Charles Lyell in <em>Principles of Geology</em> (1830)</li>
+<li>includes both slow changes and major events (floods, earthquakes)</li>
+</ul></li>
+</ul></li>
+<li>Principles of Equilibrium, Thresholds &amp; Complex Response
+<ul>
+<li>Delicate balance between landforms and processes</li>
+<li>Always consider driving forces vs resisting forces</li>
+<li><strong>Steady-state:</strong> rates of input and output are equal; system maintains time-averaged level</li>
+<li><strong>Metastable/Complex Response:</strong> when system reaches some <strong>threshold</strong> (tipping point), it abruptly shifts to a different state which may later reach steady-state equilibrium</li>
+<li><strong>Dynamic:</strong> (depends on time scale of interest) appears in steady-state over short term, but there is some trend over long term</li>
+<li>Evaluating a system’s equilibrium condition requires consideration of temporal scale &amp; capabilities to assess change over that time period</li>
+</ul></li>
+<li>Process-form relationship
+<ul>
+<li>Mediated by energy, force and resistance (driving vs resisting force)</li>
+<li>We can view a lot of our systems through the framework of what’s trying to do the work and what’s trying to hold it in place</li>
+</ul></li>
+<li>Recurrence Intervals &amp; Magnitude-Frequency relationships
+<ul>
+<li>Most geomorphic change comes from discrete events of varying size and scale (therefore, magnitude)</li>
+<li>RI: average time between events of a given magnitude</li>
+<li>Aug 2016 in Baton Rouge (Lafayette to Slidell): huge flood, magnitude super high (500-1000 year event), but doesn’t mean we cannot have similar in the near future</li>
+<li>Using all these in analyses (especially predicting large events) requires that the system we’re modelling doesn’t change in properties, but this is generally not the case</li>
+</ul></li>
+<li>Landscapes based on sensitivity
+<ul>
+<li><strong>Insensitive/robust:</strong> steady-state, “buffering”, system responds fast to external forces</li>
+<li><strong>Sensitive:</strong> slow to response to external forces, or timing of forces faster than response; complex response</li>
+<li>Landscape Sensitivity based on transient-form ratio (mean recovery time/mean recurrence interval): larger <span class="math inline">\(TF_r\)</span> means more sensitive landscape</li>
+</ul></li>
+</ul>
+<p><span class="math display">\[
+TF_r = \frac{t_r}{t_d}
+\]</span></p>
+</section>
 </section>
 <section id="endogenic-processes-earth-basics" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Endogenic Processes &amp; Earth Basics</h1>
-<p><strong>2026-08-31</strong></p>
+<ul>
+<li><strong>Endogenic:</strong> internal processes related to movement of lithosphere (tectnoics) and/or eruption of molten rock (volcanism)
+<ul>
+<li>Responsible generally for increasing elevation of landscapes</li>
+<li>Generally build up (driving force)</li>
+<li>Larger time scales</li>
+</ul></li>
+<li><strong>Exogenic:</strong> external processes related to overall wearing down of landscapes (weather, water, wind, ice)
+<ul>
+<li>Generally wearing down (resisting force)</li>
+</ul></li>
+</ul>
+<section id="geologic-time-scale" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="geologic-time-scale"><span class="header-section-number">3.1</span> Geologic Time Scale</h2>
+<p><strong>2026-09-02</strong></p>
+<ul>
+<li>Eons –&gt; Eras –&gt; Periods –&gt; Epochs</li>
+<li>Precambrian eon actually has 3 eons, but largely grouped together</li>
+<li>Boundaries based on key events in Earth’s history (Earth’s physical form, atmospheric composition, evolution/dominance of various forms of life)
+<ul>
+<li>Precambrian-Phanerozoic boundary represents <strong>Cambrian Explosion</strong>: modern atmospheric composition &amp; variety and complexity of life increased rapidly and enormously (suddenly lots of fossils)</li>
+<li>Within Phanerozoic, based on extinctions and evolution</li>
+<li>PT extinction (largest) was due to volcanic activity, not asteroid</li>
+</ul></li>
+<li>Cenozoic: modern is Palaeogene, Neogene, Quaternary
+<ul>
+<li>Pleistocene = last glaciation (2.6mya–10kya)</li>
+<li>Strong push to add Anthropocene Epoch to GTS: when? Weapons of mass destruction (mid-1900s), or <em>industrialisation</em>?
+<ul>
+<li>Only scientific argument against: we don’t know what the <em>lasting evidence</em> will be, cos no historical record as such to track</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="earths-interior" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="earths-interior"><span class="header-section-number">3.2</span> Earth’s interior</h2>
+<ul>
+<li>Internal heat drives endogenic processes</li>
+<li>Core (50%): inner is solid iron, outer is molten iron
+<ul>
+<li>Heat from compaction during formation, and from radioactive decay</li>
+<li>Heat allows mantle elements to move (mantle convection)</li>
+</ul></li>
+<li>Uppermost mantle is rigid but much denser than crust above</li>
+<li>Crust vs mantle (density); lithosphere vs asthenosphere (rigidity)</li>
+<li>Top 1% is crust: continental (granite; thicker; slightly less dense) &amp; oceanic (basalt; thinner; slightly denser)
+<ul>
+<li><strong>Isostasy:</strong> adjustment of asthenosphere to lithosphere based on density-thickness differences; keeps gravity and buoyancy in equilibrium; erosion of crust might result in uplift of plate</li>
+<li>Spatial distribution of both crust types across globe different</li>
+</ul></li>
+</ul>
+</section>
+<section id="plate-tectonics" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="plate-tectonics"><span class="header-section-number">3.3</span> Plate tectonics</h2>
+<ul>
+<li>Seven major tectonic plates</li>
+<li>Only around 1960s correlational evidence among plate shapes, earthquake hotspots, and volcanic activity came together to conceptualise plate tectonics
+<ul>
+<li>Only after WWII! With more geophysical evidence, pinpoint <em>how</em> these movements happen</li>
+<li><strong>How:</strong> mantle convection + gravity</li>
+<li>Earlier concepts thought of continents as icebergs in the oceanic sea</li>
+<li>But now we know the whole lithospheric crust moves</li>
+<li>Zero sum game: volcanic activity builds material, on the other end <strong>subduction</strong>
+<ul>
+<li>Gravity pulls one plate below another through subduction (usually in basaltic ocean crust); mantle convection adds new material atop the crust</li>
+</ul></li>
+</ul></li>
+<li><strong>Tectonic boundaries:</strong> divergent, transform, convergent</li>
+<li>Continent-continent convergent boundaries: <strong>suture zones</strong> (no scope for subduction due to thickness, equal density) resulting in orogeny</li>
+<li>Ocean-continent convergence: subduction due to oceanic being denser and thinner</li>
+<li>Ocean-ocean: older colder (denser) oceanic subducts under younger</li>
+<li>When plate gets subducted:
+<ul>
+<li>Part of it starts melting, becomes less dense, and results in more volcanic activity</li>
+<li>The higher plate also “scrapes” off subducted plate, either forming some wedge or collecting smaller islands</li>
+</ul></li>
+<li><strong>Bowen’s reaction series:</strong> sequence in which minerals crystallise/melt from magma/rock
+<ul>
+<li>High to low temperature increases silica content (earliest rocks formed have lower, latest/youngest have more silica)</li>
+<li>Silica content determines resistance to breaking down at Earth’s surface (more silica, more resistant; e.g., sand on beaches)</li>
+</ul></li>
+</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
