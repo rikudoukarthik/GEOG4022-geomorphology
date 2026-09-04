@@ -2,7 +2,7 @@ project:
   type: website
   render: 
     - "*.qmd"
-    - "!discussions/"
+    - "!assignments/"
 
 website:
   title: "GEOG 4022: Geomorphology"

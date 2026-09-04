@@ -232,3 +232,23 @@ $$
 - **Bowen's reaction series:** sequence in which minerals crystallise/melt from magma/rock
     - High to low temperature increases silica content (earliest rocks formed have lower, latest/youngest have more silica)
     - Silica content determines resistance to breaking down at Earth's surface (more silica, more resistant; e.g., sand on beaches)
+
+**2026-09-04**
+
+Rock type and characteristics (lithology) is important because determines structure and resisting forces; differential weathering produces relief
+
+## Rock types
+
+- Igneous: cooling and solidification of magma/lava
+- Metamorphic: transformation of existing rock via pressure and/or heat
+- Sedimentary: deposition + subsequent lithification (cementation & compaction) of mineral and/or organic particles
+- So it's actually a **rock cycle** 
+- Majority of rock at Earth's surface is sedimentary, although the crust just below is mostly igneous
+- In any given climate, each rock type respons to weather & erosion in a different manner and a different rate
+- High-standing landmasses should be underlain by resistant rock, while low-standing formed from rocks more susceptible to erosion
+- Climatic factors
+    - Insolation
+    - Albedo
+    - Energy gradients (atmospheric & oceanic circulations)
+    - Orographic effects (e.g., rain shadows)
+
