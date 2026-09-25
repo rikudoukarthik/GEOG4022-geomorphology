@@ -11,7 +11,7 @@ website:
       - href: index.qmd
         text: Home
       - class-notes.qmd
-      - readings.qmd
+      - lab.qmd
 
 number-sections: true
 format:

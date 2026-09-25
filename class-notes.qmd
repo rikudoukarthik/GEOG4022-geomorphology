@@ -333,6 +333,8 @@ Rock type and characteristics (lithology) is important because determines struct
     - Cuesta (<45deg), hogback (45deg), flatiron (>45deg)
 - **Plunging folds:** when compressional force is not perpendicular to material, creates anticlines or synclines with dips
     - Anticlines V in direction of plunge; Synclines open in direction of plunge
+    
+![Sideling Hill syncline, Maryland](https://cdn.serc.carleton.edu/images/NAGTWorkshops/careerprep/teaching/sideling_hill_syncline.webp)
 
 ### Arches National Park
 
@@ -341,3 +343,302 @@ Rock type and characteristics (lithology) is important because determines struct
 ### Buttes & mesas
 
 - Resistant cap rock, everything else weathered down
+
+# Volcanic Geomorphology
+
+**2026-09-14**
+
+## Importance of igneous (volcanic) processes
+
+- Main way to add crust (intrusive [stays underground] or extrusive volcanism)
+- Through volcanism, changing the shape of Earth's surface (= geomorphology)
+- Emitting gases that change weather & climate
+- Effects on other systems: rivers, coasts, biosphere (ecological succession)
+
+## Distribution & styles of volcanism
+
+- Along plate boundaries (divergent boundaries, subduction zones at convergent boundaries) or within plates at hotspots (e.g., Hawaii)
+    - All volcanism at divergent boundaries are extrusive (spreading centres); shallow earthquakes and volcanism
+    - Convergent boundaries have deeper earthquakes/volcanism; can be oceanic-oceanic or oceanic-continental
+    - Hotspots: spatially fixed in mantle (mantle plumes), and plate moves over, causing volcanism; old-young gradient of volcanoes
+
+## Magma chemistry
+
+- Igneous rock
+    - **Large crystal:** slower cooling, crystals visible without microscope (coarse grain); cooling must have been underground
+    - **Small crystal:** faster cooling, crystals invisible without microscope (fine grain)
+    - **Glassy/vesicular crystal:** very fast, extrusive cooling (obsidian or pumice styles)
+- Magma underground becomes lava aboveground
+- Deeper in the ground --> slower cooling rocks
+- **Malic:** magnesium & ferric; **Felsic:** feldspar & silica
+- Most of oceanic crust high density (basalt), most of continental low density, silica-rich (granite)
+- Lava viscosity
+    - Measure of fluid's resistance to deformation; how much does it flow?
+    - More silica --> more viscous (thicker)
+    - **Explosivity:** high viscosity prevents escape of gases, building pressure, so greater explosivity
+    - **Yield strength:** ability to resist flowing; when flow stops, shear stress (driving force) balanced by yield strength (resisting force)
+    - Basaltic lava: mafic, low silica content; "aa" ([rough, jagged](https://www.youtube.com/watch?v=iyIV5fd1Aww )) or "pahoehoe" ([ropy cords](https://www.youtube.com/watch?v=v1h_BJA4QJU))
+    - Volcanic Explosivity Index (VEI): logarithmic; consider volume of fragmented ejecta (not lava)
+
+![](pics/ign_rock_classification.png)
+
+VEI of 4:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BUREX8aFbMs?si=pMMTYBpeB18x28ve" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## Volcanic landscapes & morphology
+
+- Eruptive products: lava flows, pyroclastic material, volcanic gases
+- Flood basalts: extensive sheets of basaltic lava
+    - Over long time, up to millions of years
+- Shield: effusive eruptions (basaltic lava), gentle slopes
+- Cinder cone: small accumulation of pyroclastics (scoria) from moderately explosive eruptions
+    - Typically basaltic; short-lived
+    - Combination of flows & pyroclastic ejecta
+- Composite: mountain produced by series of explosive eruptions of lava, ash, rock, and pyroclastics
+- Caldera: collapsed summit following eruption or loss of magma
+- Dike: vertical intrusions through rock layers
+- Sill: horizontal intrusions between rock layers
+
+![](pics/volcanic_landforms.png)
+    
+![](pics/volcano_morphology.jpg)
+
+Mount St Helens:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/h6B1myUKAS4?si=ZuTrc7QS8fB4Kce4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+# Physical & Chemical Weathering
+
+**2026-09-21** (missed Friday lecture)
+
+- In geomorphoogy, exogenic vs endogenic refers more to the *origin* of the processes driving the formation of landforms (not the formation or occurrence)
+- **Weathering:** breakdown of materials, from both physical (mechanical) and chemical processes
+- **Erosion:** transport of weathered materials to different locations (movement) by a *fluid* medium (air/water)
+- **Denudation:** any process that *wears away* landforms, resulting in decreasing the elevation and relief of a landscape (lowering the Earth's surface)
+    - Include weathering, mass movement, erosion 
+    - Counteracts processes like faulting and folding, which increase elevation and relief
+    
+## Weathering
+
+- Physical and chemical processes that break down rock at or near Earth's surface
+- Some consider biological, but these can themselves be explained by physical/chemical
+- Weathering occurs because rocks are exposed to very different conditions (temperature, pressure, air/water exposure) than where they were formed
+- **Mineral stability:**
+    - General susceptibility of rock-forming minerals to weathering --> inverse of sequence of formation deep within Earth (**Goldich's Weathering Series**, opposite of Bowen's Reaction Series)
+    - Mineral complexity or crystalline structure: 
+        - Complex ionic bonds weaker than simple covalent bonds
+        - SiO~2~ (quartz) very stable
+        - ZrSiO~4~ (zircon) very stable, despite very high melting temperature
+
+![](pics/goldich.jpg)
+
+### Physical weathering
+
+- Mechanically break the rock into smaller pieces (*disaggregation*), eventually until those particles have uniform mineral composition… then continue to reduce the size of those particles
+- No change to composition of parent material
+- Can occur on any **type of Earth materials (inorganic)**:
+    - Bedrock: consolidated rock
+    - Regolith: loose layer of material covering solid bedrock
+    - Parent material: consolidated or unconsolidated material from which regolith or soils develop
+
+![](pics/hillside_crosssection.jpg)
+
+- Types/causes of physical weathering:
+    - Pressure-release jointing (fracturing): 
+        - Overburden covering buried rocks gradually removed by erosion, reduces confining pressure on rock, rock expands and fractures
+        - Occurs concentrically and parallel to rock surface
+        - **Sheeting/exfoliation:** removal of slabs of rock along joints
+        - **Exfoliation dome:** landform produced when sheeting occurs in concentric shells; common in intrusive igneous rocks like granite (e.g., Half Dome in Yosemite)
+    - Growth in voids
+    - Thermal Stress
+    - Vegetation/Roots
+    - Cavitation 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yAZ1V_DJKV8?si=Z3st-Y9uOjMA99qS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+(slide 18-26)
+
+### Chemical weathering
+
+- Rock broken down by *chemical alteration* through reactions between minerals, air, water
+- Water: powerful solvent ("universal solvent")
+    - Even more powerful when CO~2~ dissolved in water (becomes weakly acidic)
+- Minerals: may combine with O~2~ (oxidation, rust) from atmosphere
+- Reactions change primary rock-forming minerals into secondary minerals (e.g., clays), and some elements lost in solution to surface water and groundwater
+    - Essential processes for biosphere (release of nutrients)
+- 
+
+#### Oxidation & reduction
+
+- Transfer of electrons from one element to another, resulting in change in valence of primary constituents
+- Oxidation: loss of electron (weakens mineral); reduction: gain of electron
+- Redox potential (Eh): capacity of oxidation to occur; higher Eh indicate greater affinity for electrons (tendency for oxidation)
+- Pyrite (fools' gold, iron disulphide) is commonly associated with coal deposits; results in *acid mine drainage* when pH rises above 3, precipitating iron oxide
+    - Abandoned mine drainage treatment: [see example](https://youtu.be/GCn3g0T1qys?si=d5xnmb4Kp2umAgpw)
+
+#### Solution/dissolution
+
+- Transfer of mass from solid to aqueous state
+- **Congruent dissolution:** all constituents of individual molecule separated and remain in solution
+- **Incongruent:** some released ions recombine to create new compounds and secondary minerals
+
+![](pics/ph_solubility.jpg)
+
+- Calcite dissolution is reversible: as broken down carbonates travel further down and if they reach some underground cavity, conditions different (evaporation, increased pH, decreased CO~2~), and they precipitate calcite again (cave geomorphology, speleothems)
+
+#### Hydrolysis
+
+- Minerals combine with water to form new compounds; **not reversible**
+- Important for silicate minerals (e.g., granite)
+- Causes granulation and produces secondary clay minerals
+- Aluminosilicate + water --> clay mineral + cation + silicic acid
+- **Clay formation and mineralogy:**
+    - Clay minerals are layered silicates; sheets of alumina octahedral and silica tetrahedral in either 1:1 or 1:2 structure
+    - TOT structure has weaker bonds, due to T-T sheet connections, so greater area for processes
+    - Shrink/swell clays: shrink when dry and expand when wet
+    - Lateritic residuum: mineral at the end of weathering sequence; signifies long weathering process and low soil fertility
+
+#### Hydration
+
+- Incorporation of water molecules into crystal structure of minerals
+- Sometimes considered as physical weather, but here consider as chemical because occurs at lattice level
+- Reversible
+- Gypsum vs anhydrite: gypsum very soft, anhydrite much harder
+
+### Factors affecting weathering
+
+- Climate: temperature & moisture
+- Rock composition/structure
+- Presence/absence of joints/fractures: teamwork of initial physical that increases surface area for chemical to work on and round off sharp edges (**spheroidal weathering**)
+- Vegetation: root wedging (physical) + organic acids (chemical)
+- Geographic orientation: relative to sun
+    - N-facing slopes in N hemisphere cooler, moister, more vegetated (different species)
+- Global change
+
+![](pics/weathering_rock_stability.jpg)
+
+## Karst landscapes & caves
+
+**2026-09-23**
+
+- Limestone and marble (metamorphosed limestone) dissolve easily in weakly acidic environments; carbonic acid abundant in environment (H^+^ and CO~2~)
+    - Depends on partial pressure of CO~2~, so soil water highly effective
+- **Karst:** distinctive landscape that forms from highly soluble rocks, usually limestone
+    - Unique drainage pattern resulting from karst processes
+    - Slavic-Italian (*kras-carso*): bleak waterless place, or bare rock surface
+    - When water falls on surface, tends to go belowground quickly
+    - Classical description from high Kras plateau near Adriatic Sea, Slovenia; closed depressions, interrupted stream valleys
+    - Much broader term now; about 15% of Earth's land area has karst features
+    - Louisiana has no limestone, but some halite landscapes; considered evaporite, together with gypsum
+    - Dolomite (MgCO~3~) has Mg instead of Ca
+    
+![](pics/carbonate_rocks.png)
+
+### Karst landforms
+
+- **Karren:** umbrella term; small-scale solutional features on carbonates surfaces exposed at ground surface or in caves
+- **Closed depressions:** aka sinkhole; shallow depressions that form from dissolution near (on or below) the surface
+    - Solutional (top-down) vs collapse (bottom-up)
+    - Sinkholes (dolines)/collapse can be very destructive 
+        - Florida is sinkhole alley ([old news](https://youtu.be/WuMFT97sTSE?si=PpCkjXeQuDswKym4))
+        - Lake Peigneur, LA ([swallowed a lake](https://youtu.be/CmHpNTYYWcM?si=e0kGviYAH_7cXTZt))
+        - Salt drilling: no need to mine underground, just pump water underground, dissolve salt, then pump back out
+- **Grotto:** natural caves near coast/water
+- **Solution valley:** series of connected sinkholes
+- **Disappearing streams:** water enters cavity and flows underground
+
+### Tropical karst landscapes
+
+- More precipitation; more soil and vegetation, warmer temperatures
+- **Cockpit karst:** like closed depressions, but more pronounced hills between (top-down)
+- **Tower karst:** steep-sided, may not have vegetation (e.g., Guilin, China)
+
+### Caves and speleothems
+
+- **Speleothem:** secondary mineral deposit
+- Typically limestone, dolomite, gypsum
+- Stalactites (ceiling), stalagmites (ground)
+- Different shapes
+- Other acids can form as well: sulphuric acid dissolving limestone, and precipitating to calcium sulphate (gypsum). e.g., Carlsbad Caverns in NM
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wgUFb_l4DLE?si=KGSg1fWSQN3euvUN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+# Soil Geomorphology
+
+**2026-09-25**
+
+- How is soil different from just sediment?
+    - Inorganic vs organic
+    - **Regolith:** layer of fragmented, unconsolidated mineral and rock, either residual or transported, that occurs almost everywhere
+    - **Soil:** *chemically and mechanically weathered* and/or altered regolith capable of sustaining plant life. Dynamic system composed of fine organic and mineral fragments which interacts with plants, animals, water, humans...
+    - 50% mineral + organic matter, 50% air + water in pore space
+    - Darker --> more organic content
+    - *Open system:* inputs (insolation, water, rock/sediment, microorganisms) and outputs (plant ecosystems, filtered water, nutrients)
+- Basis for ecosystem function:
+    - Retain and filter water
+    - Habitat for microbial organisms and others
+    - Source for slow-release of nutrients
+    - Storage sink for carbon: soil carbon pool 3 times larger than atmospheric carbon pool!
+    - ~2/3 recent increase in atmospheric carbon comes directly from burning fossil-fuels, ~1/3 comes from loss of soil
+    - Desertification
+- Soil forming factors (Hans Jenny): CLORPT (climate, organisms, relief, parent material, time)
+    - Climate: greater moisture and temperatue --> faster chemical weathering
+    - Relief: slope, elevation, orientation. High slope: more erosion, thinner layers with less organic matter. Elevation: temperature & precipitation. Orientation: effective insolation. 
+    - Time: takes 200-1000 years for 1 inch of soil to form
+    - Could also add H for Humans: climate change, fertilisers, intensive agriculture, etc.
+- Soil production: rate at which bedrock broken down into erodible material forming soil
+    - Depends on soil residence time (between mineral grain's initial weathering to erosion/removal from slope)
+    - Soil thickness depends on equilbrium between soil production (rock weathering) and soil erosion (transport)
+    - Steepest slopes typically have poor soils, while the base of that slope receives that eroded soil and has great soils
+    - **Regolith production:** in many landscapes, production rate exponentially decreases with depth/thickness of existing regolith (separation from atmosphere). On the other hand, in landscapes where regolith production more strongly controlled by regolith water content (chemical weathering processes), the peak may be at intermediate cover thickness, so might get a right-skewed pattern.
+
+## Basic terminology
+
+- **Pedon:** smallest unit of soil that represents all the characteristics and variability used for classification (volume)
+- **Soil profile:** vertical section from surface to the deepest extent of plant roots or to the point where regolith or bedrock is encountered
+- **Soil horizons:** distinct horizontal layers organized within the soil profile
+- **Solum:** true definable soil (horizons A, E, B) in a profile, without regolith/bedrock below
+
+![](pics/soil_profile.jpg)
+
+## Soil Properties
+
+- Colour
+    - Suggests composition and chemical makeup, but can de deceptive
+    - Use hue, value, chroma
+    - Munsell Color Chart (175 colours)
+- Texture 
+    - Distribution/proportion of particle sizes (inorganic/mineral sizes) within soil
+    - Anything >2 mm is not soil, it's gravel or larger
+    - So how much sand, silt and clay proportionally? Sieve analysis
+    - **Loam:** somewhat even mix of sand, silt, clay
+    
+![](pics/soil_texture_triangle.png)
+
+- Structure
+    - Size and shape of aggregates of soil particles
+    - Smallest natural lump/cluster is called **ped**
+    - Shape of peds determines structure type (crumn/granular, platy, blocky, prismatic, columnar)
+    - How peds separate determines porosity (rounded peds more pore space, greater permeability, better for plant growth)
+- Consistency
+    - Cohesion of soil particles
+    - Product of texture (particle size) and structure (ped shape)
+    - Resistance to breaking and manipulation under varying moisture
+    - Wet, plasticity, friable, firm
+- Porosity
+    - Measure of empty spaces in soil; ratio of empty (pore) volume to total volume
+    - Permeability: connectedness of pore spaces
+- Moisture
+    - Somewhat vague; definition depends on discipline
+    - Soil scientists: water in pore spaces (field capacity, wilting point, capillary action)
+    Hygroscopic water – inaccessible to plants, molecule-thin layer
+    - **Capillary water:** water held by surface tension between particles against gravity, available for plants
+    - **Field capacity:** amount of water remaining in the soil a few days (48 hours) after rainfall and percolation has ceased
+    - **Wilting point:** only hygroscopic water remains in soil
+    - **Available water capacity (AWC):** total quantity of water that can be held in a soil for plants
+    - Capillary water is more important for plants than gravitational water, so need greatest time between field capacity and wilting point
+    
+![](pics/soil_moisture_metrics.jpg)
+
+- Chemistry
