@@ -1,8 +1,73 @@
 ---
 title: "Lab notes"
+editor_options: 
+  chunk_output_type: console
 ---
 
 # Google Earth Pro
 
-**2026-09-16**
+**2026-09-25**
+
+## Hawaiian hotspot
+
+```{r}
+library(tidyverse)
+
+# age in Mya, distance from Kilauea (km), heading in degress
+df <- tribble(~ "age", ~ "distance", ~ "heading",
+              0, 0, 0,
+              5.77, 539, 304,
+              27.7, 2452, 297,
+              46.7, 3550, 296,
+              75.82, 5640, 351)
+
+hawaii_plot <- df |> 
+  ggplot(mapping = aes(age, distance)) +
+  geom_point() +
+  geom_smooth(method = "lm", fill = NA) +
+  labs(x = "Age (Ma)", y = "Distance from Kilauea (km)") +
+  theme_classic()
+
+ggsave("assignments/hawaii_plot.png", hawaii_plot, 
+       width = 6, height = 6, units = "in", dpi = 300)
+
+lm(distance ~ age, data = df)
+```
+
+## Yellowstone hotspot
+
+```{r}
+df <- tribble(~ "age", ~ "distance", ~ "heading",
+              0.6, 0, 0,
+              2, 37.28, 239,
+              1.29, 64.58, 248,
+              4.49, 103.59, 240,
+              5.94, 93.91, 226,
+              5.37, 113.94, 226,
+              6.57, 145.14, 233,
+              6.19, 167.95, 244,
+              5.81, 145.03, 225,
+              6.19, 191.42, 231,
+              8.75, 208.03, 240,
+              7.48, 252.28, 242,
+              10.18, 234.71, 232,
+              9.34, 272.05, 239,
+              9.17, 253.14, 224,
+              9.3, 348.69, 238,
+              11.2, 461.91, 239,
+              13.3, 571.8, 246,
+              16.1, 674.46, 248)
+
+yellowstone_plot <- df |> 
+  ggplot(mapping = aes(age, distance)) +
+  geom_point() +
+  geom_smooth(method = "lm", fill = NA) +
+  labs(x = "Age (Ma)", y = "Distance from Lava Creek Tuff (km)") +
+  theme_classic()
+
+ggsave("assignments/yellowstone_plot.png", yellowstone_plot, 
+       width = 6, height = 6, units = "in", dpi = 300)
+
+lm(distance ~ age, data = df)
+```
 

@@ -393,7 +393,7 @@ VEI of 4:
     - Over long time, up to millions of years
 - Shield: effusive eruptions (basaltic lava), gentle slopes
 - Cinder cone: small accumulation of pyroclastics (scoria) from moderately explosive eruptions
-    - Typically basaltic; short-lived
+    - Typically basaltic; short-lived (erupt only once)
     - Combination of flows & pyroclastic ejecta
 - Composite: mountain produced by series of explosive eruptions of lava, ash, rock, and pyroclastics
 - Caldera: collapsed summit following eruption or loss of magma
