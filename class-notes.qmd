@@ -861,3 +861,78 @@ In addition to geomorphology affecting soil production and development, soils al
 - Soil catena: suite of soils from different positions in a landscape (*ecologically relevant, or commonly used*)
 - Soil chronosequences: can develop **Profile Development Index** (total time elapsed during development of any given soil)
 - Interpretation of landscapes: dating and interpretation of Quarternary landscapes (using all these bits of info)
+
+# Hydrology & drainage basins
+
+**2026-09-30**
+
+- Rivers responsible for about 85% of sediment delivery to ocean basins
+- Glaciers really good and efficient at sculpting Earth's surface
+- YET, sun is primary driver (precipitation and evaporation) of hydrologic cycle and therefore geomorphic hydrology 
+- **Residence time:** average time individual water molecule stays in a particular reservoir
+- Global hydrologic cycle is closed system: no loss or gain of mass, only energy
+- Characteristics of precipitation: duration, intensity, Recurrence Interval (RI)
+    - RI: probability of an event of a given magnitude occurring based on average amount of time between events
+    - $RI = (N + 1)/r$, N: no. of obs. (e..g, max 24-hr rainfall in a year), r: rank of given magnitude event (1 being highest) from these observations
+    - $P = 1/RI$
+    - Often difficult to have so many observations for a certain variable, and we want to extrapolate statistically
+
+## Precipitation pathways
+
+What happens to precipitation (rain, sleet, snow) when it falls over land?
+
+- **Interception:** delay in the fall of precipitation toward Earth’s surface caused by vegetation or other ground cover
+    - Percentage of precipitation that lands on vegetation and does not reach the ground
+    - **Stem flow:** some of the intercepted water drains down the stem of the plants to the ground
+- **Throughfall:** precipitation that makes it to the ground surface either directly or by dripping from plant leaves (does NOT include stem flow)
+
+What happens to throughfall and stem flow?
+
+- **Infiltration:** penetration of the water INTO (through) the soil surface 
+    - Determined by steepness, vegetation, degree of saturation (of soil with water), porosity & permeability (surface structure, and soil type & rock type)
+- **Percolation:** the movement of water WITHIN (downward through) the soil matrix by gravity
+- **Runoff:** movement of water across the land surface, eventually flowing to the oceans
+    - **Overland flow:** water that washes across the ground surface in a sheetlike flow; can cause erosion
+        - Hortonian overland flow (infiltration excess): inflitration rate exceeded by precipitation rate
+        - Saturation overland flow: soil is saturated with water
+    - **Stream flow:** channelized surface water flow
+    
+What happens to groundwater?
+
+- Impervious layer --> saturated/phreatic zone --> water table  --> unsaturated/vadose zone (may have (capillary fringe))
+- Saturated zone: movement by gravity and energy differences between two points
+- **Hydraulic head:** measure of total energy of water at a specific point
+    - Potential head (elevation) & pressure head (hydrostatic)
+- Porosity and permeability
+- Flow rate depends on hydraulic gradient (slope) and hydraulic conductivity (permeability of surface)
+- Movement occurs along locally perpendicular lines (steepest descent, rather than greatest hydraulic gradient)
+
+What happens to surface water in stream flows?
+
+- Stream flow can come from: precipitation, overland flow, interflow (bank seepage), baseflow (perennial rivers fed by groundwater), upstream reaches
+- Losing stream vs gaining stream
+
+![](pics/streamflow_groundwater.jpg)
+
+## Hydrograph
+
+- Curve of discharge plotted over time
+    - **Discharge:** volumetric flow rate $Q = width \times depth \times velocity$
+- In US, water year/hydrologic year starts from October 1st (lot of rivers driven by snowfall regimes)
+
+![](pics/hydrograph_variability.jpg)
+
+![](pics/hydrograph_urb1.png)
+
+![](pics/hydrograph_urb2.png)
+
+Hydrological data:
+
+USGS – Real Time Water Data http://waterdata.usgs.gov/nwis/rt 
+USACE – River Gages http://rivergages.mvr.usace.army.mil/WaterControl/new/layout.cfm 
+NOAA – River predictions http://www.weather.gov/ 
+
+## Flood frequency analysis
+
+- Annual series: take only max/peak per year
+- Partial duration series: all peak discharges above certain threshold discharge selected arbitrarily for the river

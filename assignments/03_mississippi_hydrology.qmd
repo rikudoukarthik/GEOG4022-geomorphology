@@ -1,0 +1,179 @@
+---
+title: "Mississippi River Hydrology"
+author: "Karthik Thrikkadeeri"
+bibliography: ../references.bib
+csl: "../geomorphology.csl"
+format: 
+  docx:
+    reference-doc: "../word_template.docx"
+    number-sections: false
+knitr:
+  opts_chunk:
+    echo: false
+    warning: false
+    message: false
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup}
+library(tidyverse)
+library(ggplot2)
+library(lubridate)
+library(here)
+
+
+location_map <- read.csv(here("assignments/03_location_map.csv")) |> 
+  relocate(Gage_ID, Site_Name) |> 
+  magrittr::set_colnames(c(
+    "Gage ID", "Site Name", "City", "Coordinates", "Drainage Area (sq. mi.)", 
+    "Gage Datum", "Comments"
+  ))
+
+peak_data <- read.csv(here("assignments/03_peak_measurements.csv")) |> 
+  # select only cubic feet per sec values, ignore feet (height) values
+  filter(unit_of_measure == "ft^3/s")
+
+daily_data_mean <- read.csv(here("assignments/03_daily-data-mean.csv")) |> 
+  mutate(year = year(time))
+
+```
+
+In this exercise, I explore surface water hydrology data from the Mississippi River at the Baton Rouge station to understand long-term patterns in the hydrological record. This particular station has had regular measurements since March 2004, and miscellaneous measurements until 1976. It is located off River Road, with built-up land of downtown Baton Rouge around (@tbl-locs). I obtained the required data from the USGS Water Data for the Nation webpage for this station [@usgs2026]. 
+
+```{r}
+#| label: tbl-locs
+#| tbl-cap: "Station information for Mississippi River at Baton Rouge, LA (USGS-07374000)."
+#| tbl-colwidths: [10, 15, 10, 20, 15, 10, 20]
+
+location_map |> knitr::kable()
+```
+
+Peaks in instantaneous discharge measurements can tell us about flooding events every year. In the Mississippi River at Baton Rouge station, the peak discharge values fluctuate every few years, but there is no clear trend over the last several decades (@fig-peak, @tbl-peaks). The fluctuations have stayed consistently within a specific range of values, which means that there have been no extraordinary-magnitude flooding events during this time period.
+
+```{r}
+#| label: fig-peak
+#| fig-width: 6
+#| fig-cap: "Peak annual discharge at Mississippi River at Baton Rouge station (USGS-07374000). Regular measurements started here in 2004."
+
+y_lab_peak <- expression("Peak annual discharge (" ~ ft^3 * "/s" * ")")
+
+peak_data |> 
+  ggplot(mapping = aes(x = year, y = value)) +
+  geom_point() +
+  geom_line(alpha = 0.2) +
+  scale_y_continuous(labels = scales::comma) +
+  labs(x = "Year", 
+       y = y_lab_peak) +
+  theme_classic() +
+  theme(panel.grid.major.y = element_line(colour = "grey90"))
+```
+
+The mean discharge values also do not show any clear trend over time (@fig-mean); if a basic trendline were to be fit, it would suggest a very slight increase, but its statistical significance would require a robust test after transforming the raw discharge values which are in the hundreds of thousands. There was a notable increase in the mean discharge in 2019, which may have resulted not from a single extraordinary event (@fig-peak), but rather multiple high-magnitude discharges in the same year. 
+
+```{r}
+#| label: fig-mean
+#| fig-width: 6
+#| fig-cap: "Mean annual discharge at Mississippi River at Baton Rouge station (USGS-07374000), since 2004."
+
+y_lab_mean <- expression("Mean annual discharge (" ~ ft^3 * "/s" * ")")
+
+daily_data_mean |> 
+  # calculate mean annual discharge
+  group_by(year) |> 
+  reframe(mad = mean(value)) |> 
+  ggplot(mapping = aes(x = year, y = mad)) +
+  geom_point() +
+  geom_line(alpha = 0.2) +
+  # # add trendline
+  # geom_smooth(method = "lm", se = FALSE) +
+  # prevent computer notation
+  scale_y_continuous(labels = scales::comma) +
+  labs(x = "Year", 
+       y = y_lab_mean) +
+  theme_classic() +
+  theme(panel.grid.major.y = element_line(colour = "grey90"))
+
+```
+
+A recurrence interval analysis has been performed using the peak streamflow data (@tbl-peaks) for historical flood events. These events have been ranked and their recurrence intervals and probabilities also calculated (@tbl-rec), using the following formulas:
+
+$RI = (N + 1)/r$, where $N$ is the total number of observations, and $r$ is the rank of a given magnitude event
+
+$P = 1/RI$
+
+This flood frequency analysis is shown below:
+
+```{r}
+#| label: fig-rec
+#| fig-width: 6
+#| fig-cap: "Recurrence interval analysis of historical flood events at Mississippi River at Baton Rouge station (USGS-07374000). Points represent peak discharge measurements at the station, while the trendline and shaded region (95% confidence interval) represent a simple linear regression trend fitted on a logarithmic scale of recurrence interval. The trendline is extrapolated for higher recurrence intervals from the measured data."
+
+recurrence_data <- peak_data |> 
+  select(year, value) |> 
+  mutate(N = n(),
+         rank = min_rank(desc(value))) |> 
+  mutate(rec_int = (N + 1)/rank,
+         prob = 1/rec_int) |> 
+  arrange(rank) |> 
+  select(-N) 
+
+
+recurrence_data |> 
+  ggplot(mapping = aes(x = rec_int, y = value)) +
+  geom_point() +
+  scale_x_log10(limits = c(1, 200)) +
+  scale_y_continuous(labels = scales::comma) +
+  labs(x = "Recurrence Interval (yr)", y = y_lab_peak) +
+  geom_smooth(method = lm, fullrange = TRUE, col = "darkred")  +
+  theme_classic() +
+  theme(panel.grid.major = element_line(colour = "grey90"))
+
+```
+
+Using the observed trend, I have also estimated discharge values for flood events of specific recurrence intervals, and therefore magnitudes (@tbl-estim). This also confirms the previous conclusion that this particular station has not measured an extraordinary-magnitude event such as a 100-year flood event (although this reasoning is circular).
+
+```{r}
+#| label: tbl-estim
+#| tbl-cap: "Estimated discharge values for different magnitude flood events, based on 46-yr dataset from Mississippi River at Baton Rouge, LA (USGS-07374000)."
+
+recurrence_model <- lm(value ~ log10(rec_int), data = recurrence_data)
+
+recurrence_new <- data.frame(rec_int = c(1, 3, 10, 25, 50, 100))
+
+recurrence_new |> 
+  mutate(value = predict(recurrence_model,
+                         newdata = recurrence_new,
+                         type = "response")) |> 
+  magrittr::set_colnames(c("Recurrence Interval (yr)", 
+                           "Estimated peak annual discharge (ft^3/s)")) |> 
+  knitr::kable()
+```
+
+# References
+
+::: {#refs}
+:::
+
+# Appendix
+
+```{r}
+#| label: tbl-rec
+#| tbl-cap: "Historical flood events based on peak streamflow data from Mississippi River at Baton Rouge station (USGS-07374000). Events are ranked and ordered, and recurrence intervals and probabilites are also shown."
+#| tbl-colwidths: [15, 25, 15, 25, 20]
+
+recurrence_data_pretty <- recurrence_data |> 
+  magrittr::set_colnames(c(
+    "Year", "Peak annual discharge (ft^3/s)", "Rank", "Recurrence Interval (yr)", "Probability"
+  ))
+
+recurrence_data_pretty |> knitr::kable()
+
+```
+
+```{r}
+#| label: tbl-peaks
+#| tbl-cap: "Peak annual discharge data from Mississippi River at Baton Rouge station (USGS-07374000). Regular measurements started here in 2004."
+
+peak_data |> knitr::kable()
+```
