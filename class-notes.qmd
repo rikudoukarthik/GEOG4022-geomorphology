@@ -932,7 +932,304 @@ USGS – Real Time Water Data http://waterdata.usgs.gov/nwis/rt
 USACE – River Gages http://rivergages.mvr.usace.army.mil/WaterControl/new/layout.cfm 
 NOAA – River predictions http://www.weather.gov/ 
 
-## Flood frequency analysis
+## Flood/flow frequency analysis
 
 - Annual series: take only max/peak per year
 - Partial duration series: all peak discharges above certain threshold discharge selected arbitrarily for the river
+
+# Basin Morphometry
+
+**2026-10-05**
+
+- Fluvial systems move water and sediment from continents to oceans
+    - Collecting region: dominated by erosion
+    - Transporting: region moving water and sediment along
+    - Dispersing region: dominated by dispersion
+- Get water from:
+    - Surface runoff (overland flow, rills, gullies)
+    - Groundwater (base flow)
+    
+## Drainage basins, watersheds, catchments
+
+- Area of Earth's surface that contributes water, sediment, and dissolved materials to a specific river or river network
+- Downstream extent (single location) is selected to fulfull needs of analysis
+- Bounded by **drainage divides**: topographical boundaries separating runoff and groundwater
+    - Separates one basin from a neighbouring basin; ridges and highlands that mark the limits of the catchment area of the drainage basin
+- Delineating watersheds:
+    - Determine area that contributes to single (defined) outlet location
+    - Trace topographic high (divide) using elevation data
+- Hierarchical arrangement: any drainage basin can be divided into several smaller drainage basins
+    - Can define watershed for any point along any stream in a stream network
+    - Most water authorities prefer maps at basin level rather than political/admin maps (e.g., below Louisiana river basins)
+    
+***inc LA river basin map here***
+
+## Drainage patterns
+
+- Largely controlled by underlying geologic structure
+- Most common is dendritic, but others exist
+
+***photo of drainage patterns**
+
+- Dendritic: uniform rock composition and moderate slopes
+- Trellis: dipping (monocline) or folded topography with differential weathering (kinda parallel to ridges)
+- Radial: stream flows off a central peak
+- Rectangular: faulted and jointed landscape direct stream courses in patterns of right-angled turns
+- Annular: structural domes (formed by folding of rocks in 2d), with concentric patterns
+- Deranged: chaotic arrangement of channels connecting small lakes and marshes, typical of landscapes following the retreat of ice sheets
+
+## Morphometric indices
+
+$$
+\text{Drainage density} = \frac{\text{total length of all stream channels in basin}}{\text{area of basin}}
+$$
+
+- Degree to which basin is dissected by stream flow
+- Also affected by erodibility and permeability of rocks, steepness of slopes, and vegetation cover
+- Climate
+    - Humidity encourages vegetation cover, reduces channel formation (holding surface sediment in place)
+    - Arid: although vegetation cover i slimited, there is not enough runoff to carve extensive channel systems
+    - **Semiarid:** enough rain to produce runoff but not enough to sustain much vegetation
+        - Badlands have high drainage density
+
+$$
+R_h =  \frac{\Delta H}{l_b}
+$$
+        
+- **Relief ratio:** ratio of total basin relief to basin length
+    - Insight into tectonic uplift and rock resistance, downslope pathways, storage time of water, sediment and solutes
+- **Hypsometric curve:** proportion of total basin area on X and proportion of total basin height on Y, shows topographic variation/heterogeneity over the length of the basin
+    - Area under the curve can be indication of watershed landscape evolution
+- **Stream order:** hierarchical numbering system assigned to stream segments
+    - Convenient means to indicate the relative size of a channel segment or of a drainage network
+    - **Horton-Strahler approach:** 
+        - Segment with no tributaries is first-order
+        - Junction of two streams of order $u$ creates downstream channel segment of order $u + 1$
+        - Junction of $u$ with order $<u$ remains as $u$
+        - Drawback: violation of additive rule goes against physical system; properties like stream discharge can change when lower-order enters higher-order, but order of main stream remains unaltered (ignored size of basin)
+    - **Shreve ordering system:**
+        - Additive system; more pppular in modern; shows magnitude
+        - Network magnitude indicates ...
+        - Can then plot each split over "generations" of the basin on Y (**hydrograph**)
+            - Diameter (max. link distance; no. of nodes between outlet and farthest first order tributary)
+            - Generation (successive link distances from outlet to farthest first order tributary)
+            - Width (no. of channels per generation)
+
+## Delineating stream networks
+
+**2026-10-07**
+
+How far upstream do channels extend? Difference between channel and hillslope hollow? Perennial vs ephemeral streams?
+
+- **Channel initiation:** 
+    - Channel head: upstream boundary of concentrated water flow and sediment transport, between definable banks, which separates process domains of hillslopes/unchanneled hollows from channel networks
+    - Stream head: location where perennial flow occurs (downslope of channel head)
+- **Channel maintenance:**
+    - All stream channels require a *minimum drainage (contributing) area* in order to be maintained (regardless of how stream channelss are generated)
+    - Some combination of slope and water
+    - Flows in the initiated channel must be large enough and occur frequently enough to counteract infilling by mass movement, debris-laden flows, or rainsplash
+    - **Hortonian overflow model:** as we go away from ridgeline, reach a point where depth/amount of water/slope high enough
+        - Shear stress, $\tau = \rho g H S$ (density, gravitational acceleration, depth/height, slope)
+        - From ridgeline: $\tau \lt \tau_c$ (no erosion) --> $\tau = \tau_c$ (critical value) --> $\tau \gt \tau_c$ (zone of erosion)
+        - Further downstream, can return to $\tau \lt \tau_c$ (no erosion, but deposition)
+- **Network evolution:** stages per Glock (1931)
+    - Initiation --> extension by elongation (headward growth) --> extension by elaboration (tributaries) --> maximum extension --> abstraction/integration 
+
+## Longitudinal profiles
+
+Variation in slope of stream over its length. Generally, concave up, steeper at headwaters, gentler at mouth. WHY?
+
+- **Base level:** theoretical level below which a stream cannot erode (denude) its valley
+    - Barely enough slope (potential energy) to sustain water flow
+- Discharge and sediment load/caliber
+    - Both increase with length of river
+    - Grain size decreases downstream; abrasion + selective sorting
+- **Lane's balance:** degradation (scouring out of channel), aggradation (filling in of channel)
+- Graded stream: mutual adjustment between slope, size and shape of channel for equilibrium
+- Local increases in gradient are called **knickpoints** (waterfalls, rapids); caused by layers of resistant rocks or faulting; over time with erosion, moves upstream (e.g., Niagara Falls)
+
+***photo of Lane's balance***
+
+## Spatial differentiation of drainage basins
+
+Schumm (1977): basins longitudinally zoned wrt sediment dynamics: headwater *production*, mid-basin *transfer*, downstream *depositional*
+
+### Sediment connectivity and storage
+
+- Headwater streams: sediment reservoirs at timescales of 10-100 years, episodically evacuated by debris flows and/or gully erosion
+- Higher stream order and drainage area: sediment yield per unit area decreases and sediment residence time increases
+- Coupled vs buffered links: more buffered links at higher stream order
+
+### Sediment yield and landscape denudation
+
+- **Sediment yield:** total amount (mass) of sediment leaving a drainage basin per unit time (yr)
+    - Accumulations of sediment in reservoirs/lakes, or sediment rating curves (load:discharge)
+    - Most studies only consider suspended sediment since bedload data unavailable
+    - Larger (higher order) watersheds have lower sediment yield
+- **Denudation rate:** amount of sediment leaving basin; estimate of surface lowering (cm) per unit time (1000 yr)
+    - Total sediment yield (volume) per unit area
+
+# Fluvial Geomorphology
+
+**2026-10-12**
+
+**River dynamics trinity:** Physical changes in river channels can be explained by mutual adjustments and interactions among moving water (**flow**), **sediment** (erosion, transport, deposition), and channel form (**morphology**). (These only consider geological/hydrological context, not ecological.)
+
+Vegetation offers resistance to flow, provides reinforcement of bank material. Either riparian or in-channel vegetation (and/or debris). 
+
+## Flow
+
+Gravity (driving force) and friction (due to roughness of grains, bedforms and channel curvature; resisting force). 
+
+$$
+Discharge, Q = width \times depth \times velocity
+$$
+
+Velocity depends on slope and roughness. Manning equation:
+
+$$
+U = \frac{1}{n} R^{2/3} S^{1/2} 
+$$
+
+where R is hydraulic radius (area divided by wet perimeter), n is Manning roughness coefficient (can also be defined by other variables like grain size), S is slope.
+
+Froude number quantifies variability of velocity across channel
+
+$$
+Fr = \frac{U}{\sqrt{gH}}
+$$
+
+If $Fr < 1$ **subcritical** (effects spread both upstream and downstream), and if $Fr > 1$ **supercritical** (only downstream)
+
+**2026-10-14**
+
+Spatial variability (multiple cross-sections along channel at one point of time) and temporal variability (one cross-sections at multiple points of time, e.g., flood, spring/fall, summer).
+
+Width usually does not change much with higher discharge because walls are steep (upstream). But downstream, width is usually what accommodates change in discharge.
+
+**Hydraulic geometry relations:** relations between discharge and width, depth and velocity follow power law. 
+
+- **Dominant discharge:** Single event that represents entire range of morphologically significant flows
+    - Conceptual value
+    - Single event that determines the morphological characteristics of the channel, more than any other flow
+    - All flows affect the channel but net result same as if this single event occurred continuously
+    - Implies an event that represents equilibrium between process and form
+- **Bankfull discharge:** stage just before flow begins to overtop the banks
+    - Geometric value
+- **Effective discharge:** discharge that does most geomorphic work (sediment transport; using magnitude-frequency analysis)
+    - Combination of discharge frequency histogram and non-linear sediment discharge rate (higher for infrequent high magnitude flooding events)
+- Turns out that these 3 discharge concepts are roughly the same!
+
+## Sediment
+
+**2026-10-16**
+
+- Sediment supply:
+    - Delivered from upstream sources:
+        - In-channel reaches
+        - Hillslopes
+        - Bed and banks
+    - **Transport Capacity:** max. amount of sediment that can be transported by given flow
+        - If dam exists, stops sediment, and downstream has more erosion
+    - Sediment caliber: size (competence) and sorting
+- Hydraulics and stream transport:
+    - **Stream Power** $\Omega = \rho_w g Q S$ (rate of potential energy loss)
+    - **Shear Stress** $\tau = \rho_w g H sin\theta = \rho_w g H S$ ($sin\theta$ approximates to $tan\theta$ at low slopes)
+- Load types
+    - Dissolved/solution load: material dissolved in water (usually calcite or salts)
+    - Suspended/wash load: fine-grained clasts suspended in water, held up by turbulence (usually clays, silts)
+    - Bed load: coarser materials moving along channel bed
+        - Traction: rolling, sliding (constant contact)
+        - Saltation: moving along in short hops, bouncing
+        
+**Hjulstrom diagram** ***include photo from ppt***
+
+- Velocity vs grain size; what velocity for erosion, transport, deposition
+- Erosion: 
+    - For very small (clay-like) particles, required velocity for initial movement is high because they are cohesive and occur in clumps
+    - But after some mid-point of grain size, it becomes linear increase (intuitive)
+- Transport:
+    - For gravel, very narrow range of velocity for transport, because it very quickly starts settling down to bed (deposition)
+    - Clay and silt require very little velocity once eroded to stay in transport
+    
+### Bedforms
+
+- Arrangement of sediment as waves of sand that get moved along the bed
+- Bedload types: Ripples (smallest scale, <3cm height, so small grain size), dunes (larger, 10cm to multiple m), bars (largest scale)
+    - Cross-bedding: preservation of angle of trough slope of dunes through dune migration
+    - In unidirectional flows (rivers) dunes have asymmetric ripples/dunes
+- Larger the bedform, more resistance there is to flow; because $Q = W H U$, larger discharges result in larger bedforms (higher H, lower U); above certain threshold flow, bedforms flatten out (restore U)
+
+***include YT video***
+
+**Barforms:** Larger than bedforms
+
+## Morphology
+
+**2026-10-19**
+
+- **Channel planform:** pattern of river as viewed from above
+- Distinguished based on **sinuosity** and **single/multithread** channel
+    - Sinuosity: how much channel planform deviates from straight path (length along channel divided by straight line length)
+- Types: straight, meandering, braided, anastomosing
+- Depends on slope and sediment load
+
+![](pics/channel_planform.jpg)
+
+### Meandering
+
+- Curving channel boundaries results in curving path of highest velocities (fastest on outer bank, slowest on inner banks)
+- This leads to:
+    - Erosion along outer bank (pool & cut bank)
+    - Deposition along inner bank (point bar)
+- Meander migration
+    - Any river [here](https://earthengine.google.com/timelapse/)
+    - Over time, meander bends may intersect to form **cutoffs**, which later turn into **oxbox lakes** (eventually meander stars)
+    - Neck vs chute cutoffs (distance less than one channel width, vs overbanking/flooding)
+
+### Braided
+
+- Multiple interconnected channels separated by unvegetated bars
+- In bankfull discharge, all connected into one channel, so don't name individual channels
+- Channels/bars always changing over time
+- Common in arid & glacial
+    - Variable discharge (more like polarised levels)
+    - Steep slopes
+    - Abundant bed load
+    - Erodible/non-cohesive banks
+
+![](pics/river_meandervsbraid.jpg)
+
+### Anastomosing/anabranching
+
+- Multiple interconnected channels separated by vegetated floodplain (islands)
+- Generally very large river systems
+
+### Channel-reach morphology
+
+Smaller scale than 4 types of rivers
+
+![](pics/channel_reach_morph.jpg)
+
+## Fluvial landforms
+
+- Valleys fundamental features of fluvial erosion
+- Generally V-shaped (unlike U-shaped of glaciers)
+- Eventually lose downcutting ability, then start valley widening 
+- **Alluvial terraces:** form when change in env. conditions isolates floodplain from river channel
+    - Level areas of river sediment (alluvium) stepping down toward river channel
+    - Caused by river degradation (incising) due to episodic drops in base level relative to river bed (caused by uplift or drop in sea level or local base level)
+    - [Video](https://mediaplayer.pearsoncmg.com/assets/hi0j429j5LerlRsY5pJNfNsRG0hKGEPa)
+- Straft terraces: flat bedrock instead of alluvium
+- Floodplain:
+    - Most rivers around the world reach bankfull/dominant discharge every 1--3 years, so very much active part of river system
+    - Floodpains are storage area for water during floods, and for sediment over decades/centuries
+    - Formation by:
+        - **Lateral accretion:** sediment on point bars as river migrates across valley bottom
+        - **Vertical accretion:** fine sediment that falls out of suspension during floods
+            - Deposition occurs because flow slows as soon as leaves channel
+            - Natural levees form: alluvium deposits directly over channel banks, forms ridge following channel banklines
+            - Self-limiting process
+            - Back levee (engineered): allow for flooding corridor
+    
+![](pics/floodplain_construction.jpg)
