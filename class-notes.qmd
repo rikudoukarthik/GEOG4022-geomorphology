@@ -1239,6 +1239,8 @@ But in downstream geometry, need to be comparing the "same" *kind* of flow (not 
 
 **2026-10-19**
 
+### Channel planform
+
 - **Channel planform:** pattern of river as viewed from above
 - Distinguished based on **sinuosity** and **single/multithread** channel
     - Sinuosity: how much channel planform deviates from straight path (length along channel divided by straight line length)
@@ -1247,7 +1249,7 @@ But in downstream geometry, need to be comparing the "same" *kind* of flow (not 
 
 ![](pics/channel_planform.jpg)
 
-### Meandering
+#### Meandering
 
 - Curving channel boundaries results in curving path of highest velocities (fastest on outer bank, slowest on inner banks)
 - This leads to:
@@ -1258,7 +1260,7 @@ But in downstream geometry, need to be comparing the "same" *kind* of flow (not 
     - Over time, meander bends may intersect to form **cutoffs**, which later turn into **oxbox lakes** (eventually deposited/filled in, to form meander ?stars?)
     - Neck vs chute cutoffs (distance less than one channel width, vs overbanking/flooding)
 
-### Braided
+#### Braided
 
 - Multiple interconnected channels separated by unvegetated bars
 - In bankfull discharge, all connected into one channel, so don't name individual channels
@@ -1271,10 +1273,12 @@ But in downstream geometry, need to be comparing the "same" *kind* of flow (not 
 
 ![](pics/river_meandervsbraid.jpg)
 
-### Anastomosing/anabranching
+#### Anastomosing/anabranching
 
 - Multiple interconnected channels separated by vegetated floodplain (islands)
 - Generally very large river systems
+- **Anabranching:** more general term, can span wide range of stream energies and gradients
+- **Anastomosing:** specifically low-energy, low-gradient systems with low channel migration rates, characterised by fine-grained, cohesive, organic-rich sediments (downstream, transportation/dispersion processes)
 
 ### Channel-reach morphology
 
@@ -1323,6 +1327,7 @@ Most rivers around the world reach bankfull/dominant discharge every 1--3 years,
         - Non-meandering channel with frequent floods: entire channel rises up due to deposition, eventually causing an abrupt switch in the main river stem
         - (Like desire paths, seeks the steeper path from A to B lateral to the original stem)
         - Repeat: starts building up there, then another switch
+        - Switch often caused by sediment impoundments behind log jams
         - Non-meandering: not much lateral movement, so starts forming web-like channel structure
     
 ![](pics/floodplain_construction.jpg)
