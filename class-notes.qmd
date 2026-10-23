@@ -53,7 +53,7 @@ Lots of themes, lots of valid dichotomies
 ## Historical geomorphology
 
 - Study of landform genesis & evolution over medium to long time scales
-- WM Davis (geographer, one of founders of AAG) introduced concept of The Geographical Cycle: landscapes undergo initial and sudden uplift, then geomorphic processes continue gradually wearing down topography (increase in relief). Stages are youthful, mature, old age.
+- WM Davis (geographer, one of founders of AAG) introduced concept of **The Geographical Cycle**: landscapes undergo initial and sudden uplift, then geomorphic processes continue gradually wearing down topography (increase in relief). Stages are youthful, mature, old age.
 - Especially these terminologies were very simplistic, and not very popular now.
 - Currently, relies on advanced dating techniques to reconstruct Quaternary history of a region (now--2.5mya)
 
@@ -68,44 +68,53 @@ Lots of themes, lots of valid dichotomies
     - Robert Horton: hydrophysical approaches to study fluvial systems
     - Arthur Strahler: advocated for dynamic geomorphology
     - 1950s--60s: explosion of quantitative process-based studies, emphasis on equilibrium (self-regulation) in fluvial systems (systems concepts)
-    - 1970s: slow shift to disequilibrium
+    - 1970s: slow shift to disequilibrium (thresholds, complex response)
     - 1980s: renewed interest in systems approaches
     - 1990s--recent: non-linear dynamics, numerical & physical modelling, sophistication of field techniques & tech
     - Morphodynamics: study of landscape evolution as it relates to deposition and erosion of sediment (Gary Parker)
-    
-**Arguments against (1980s)**
 
-- Small scale processes, reductionism
-- Emphasis on applied (becoming nothing more than engineering)
-- "The re-enchantment of geomorphology", Vic Baker and Rollie Twidale (1991)
+### Dynamic equilibrium & process geomorphology
+
+Processes acting on landforms can be responsible for various equilibrium states:
+
+- Steady-state equilibrium: may fluctuate at short time scale but stable over long time period
+- Dynamic equilibrium: appears steady at short time scales but changing over larger time scales, with some increasing or decreasing trend towards some eventual state
+- Metastable equilibrium (**complex response**): effectively steady-state on short time scale but over large time scales has abrupt thresholds/**tipping points** that change the baseline of the equilibrium state
 
 ## Reenchanctment of geomorphology
 
+Critique of process geomorphology ramped up in 1980s: small scale processes, reductionism; emphasis on applied (becoming nothing more than engineering). 
+
+"The re-enchantment of geomorphology", Vic Baker and Rollie Twidale (1991)
+    
 - Critical of Process Geomorphology (4 main concerns)
     - Anti-historicism (ignoring rare/extreme events)
     - Over-reliance on physical theory (theoreticism diverts attention from observation, first step of scientific method)
     - Increasing emphasis on applied studies: becoming engineering, application should not drive science
     - Over-emphasis on modelling: sophistication replacing accuracy
-- Solution: **maverick geomorphology** (anomalies, creativity & discovery, non-theoretical historical studies)
+- Solution: **maverick geomorphology** (outrageous hypotheses, anomalies, creativity & discovery, non-theoretical historical studies)
 
 ## Subgroups of geomorphology
 
 - Tectonic: interaction between tectonic & geomorphic processes where crust actively deforms; interest in orogenies (mountain building)
 - Climatic: some proponents suggest climatic zones (tropics, arid, etc.) engenders a distinctive suite of landforms, but highly contested, more to it (though climate does have strong influence)
     - Physiographic provinces: at regional scales, tectonic forces and climatic conditions create distinct provinces, producing similar landforms
+    
+![](pics/physiographic_provinces.png)
+  
 - Hydro-: hydrology + geomorphology
 - Bio-/eco- (plants or animals)
 - Biomorphodynamics: biological-physical feedbacks between animals and plants and physical geomorphic processes
 - Anthropo-, submarine, planetary (lots more)
 - Exact terms don't matter, conceptual syntheses
 
-Fig 1. from Steiger & Corenblit 2012 is nice for my perspective. But Kory disagrees with bio- being only passive manipulators of Earth surface processes (also active).
+![I felt this was relevant for my perspective (geodiversity). But Kory disagrees with bio- being only passive manipulators of Earth surface processes (also active).](pics/steiger_corenbilt_2012_fig1.png)
 
-# Methods for Geomorphic Science
+## Methods for Geomorphic Science
 
 **2026-08-28**
 
-## Common variables of interest
+Common variables of interest:
 
 - Water velocity and discharge (volumetric flow rate)
     - Classic propeller-meters for 1d measurement
@@ -152,7 +161,7 @@ Fig 1. from Steiger & Corenblit 2012 is nice for my perspective. But Kory disagr
         - laws of physics and natural processes operating today are same as those in past (vast, long geologic history)
         - Charles Lyell in *Principles of Geology* (1830)
         - includes both slow changes and major events (floods, earthquakes)
-- Principles of Equilibrium, Thresholds & Complex Response 
+- Equilibrium, Thresholds & Complex Response 
     - Delicate balance between landforms and processes
     - Always consider driving forces vs resisting forces
     - **Steady-state:** rates of input and output are equal; system maintains time-averaged level
@@ -200,17 +209,22 @@ $$
     - Strong push to add Anthropocene Epoch to GTS: when? Weapons of mass destruction (mid-1900s), or *industrialisation*?
         - Only scientific argument against: we don't know what the *lasting evidence* will be, cos no historical record as such to track
 
+![](pics/gts.jpg)
+
 ## Earth's interior
 
 - Internal heat drives endogenic processes
 - Core (50%): inner is solid iron, outer is molten iron
     - Heat from compaction during formation, and from radioactive decay
     - Heat allows mantle elements to move (mantle convection)
-- Uppermost mantle is rigid but much denser than crust above
-- Crust vs mantle (density); lithosphere vs asthenosphere (rigidity)
-- Top 1% is crust: continental (granite; thicker; slightly less dense) & oceanic (basalt; thinner; slightly denser)
+- Non-core:
+    - Rigidity: rigid lithosphere (crust + uppermost mantle) vs plastic asthenosphere (transition between rigid upper mantle and rigid uppermost mantle)
+    - Density: low density crust vs high density mantle (inc. upper mantle)
+- Top 1% is crust: 
+    - Continental (granite; thicker; slightly less dense) vs oceanic (basalt; thinner; slightly denser)
     - **Isostasy:** adjustment of asthenosphere to lithosphere based on density-thickness differences; keeps gravity and buoyancy in equilibrium; erosion of crust might result in uplift of plate
-    - Spatial distribution of both crust types across globe different
+
+![Spatial distribution of both crust types across globe different](pics/crust_spat_dist.jpg)
 
 ## Plate tectonics
 
@@ -229,7 +243,7 @@ $$
 - When plate gets subducted: 
     - Part of it starts melting, becomes less dense, and results in more volcanic activity
     - The higher plate also "scrapes" off subducted plate, either forming some wedge or collecting smaller islands 
-- **Bowen's reaction series:** sequence in which minerals crystallise/melt from magma/rock
+- **Bowen's reaction series:** sequence in which minerals crystallise from magma (inversely, melt from rock)
     - High to low temperature increases silica content (earliest rocks formed have lower, latest/youngest have more silica)
     - Silica content determines resistance to breaking down at Earth's surface (more silica, more resistant; e.g., sand on beaches)
 
@@ -243,8 +257,11 @@ Rock type and characteristics (lithology) is important because determines struct
 - Metamorphic: transformation of existing rock via pressure and/or heat
 - Sedimentary: deposition + subsequent lithification (cementation & compaction) of mineral and/or organic particles
 - So it's actually a **rock cycle** 
+
+![](pics/rock_cycle.png)
+
 - Majority of rock at Earth's surface is sedimentary, although the crust just below is mostly igneous
-- In any given climate, each rock type respons to weather & erosion in a different manner and a different rate
+- In any given climate, each rock type responds to weather & erosion in a different manner and a different rate
 - High-standing landmasses should be underlain by resistant rock, while low-standing formed from rocks more susceptible to erosion
 - Climatic factors
     - Insolation
@@ -412,7 +429,7 @@ Mount St Helens:
 
 **2026-09-21** (missed Friday lecture)
 
-- In geomorphoogy, exogenic vs endogenic refers more to the *origin* of the processes driving the formation of landforms (not the formation or occurrence)
+- In geomorphology, exogenic vs endogenic refers more to the *origin* of the processes driving the formation of landforms (not the formation or occurrence)
 - **Weathering:** breakdown of materials, from both physical (mechanical) and chemical processes
 - **Erosion:** transport of weathered materials to different locations (movement) by a *fluid* medium (air/water)
 - **Denudation:** any process that *wears away* landforms, resulting in decreasing the elevation and relief of a landscape (lowering the Earth's surface)
@@ -438,9 +455,9 @@ Mount St Helens:
 - Mechanically break the rock into smaller pieces (*disaggregation*), eventually until those particles have uniform mineral composition… then continue to reduce the size of those particles
 - No change to composition of parent material
 - Can occur on any **type of Earth materials (inorganic)**:
-    - Bedrock: consolidated rock
-    - Regolith: loose layer of material covering solid bedrock
-    - Parent material: consolidated or unconsolidated material from which regolith or soils develop
+    - **Bedrock:** consolidated rock
+    - **Regolith:** loose layer of material covering solid bedrock
+    - **Parent material:** consolidated or unconsolidated material from which regolith or soils develop
 
 ![](pics/hillside_crosssection.jpg)
 
@@ -468,8 +485,6 @@ Mount St Helens:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yAZ1V_DJKV8?si=Z3st-Y9uOjMA99qS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-(slide 18-26)
-
 ### Chemical weathering
 
 - Rock broken down by *chemical alteration* through reactions between minerals, air, water
@@ -478,13 +493,13 @@ Mount St Helens:
 - Minerals: may combine with O~2~ (oxidation, rust) from atmosphere
 - Reactions change primary rock-forming minerals into secondary minerals (e.g., clays), and some elements lost in solution to surface water and groundwater
     - Essential processes for biosphere (release of nutrients)
-- 
+- **Saprolite:** Chemically weathered, "rotten" rock that forms directly on top of intact bedrock
 
 #### Oxidation & reduction
 
 - Transfer of electrons from one element to another, resulting in change in valence of primary constituents
 - Oxidation: loss of electron (weakens mineral); reduction: gain of electron
-- Redox potential (Eh): capacity of oxidation to occur; higher Eh indicate greater affinity for electrons (tendency for oxidation)
+- Redox potential (Eh): capacity of oxidation to occur (property of soil); higher Eh indicate soil with greater affinity for electrons (tendency for oxidation of minerals into soil)
 - Pyrite (fools' gold, iron disulphide) is commonly associated with coal deposits; results in *acid mine drainage* when pH rises above 3, precipitating iron oxide
     - Abandoned mine drainage treatment: [see example](https://youtu.be/GCn3g0T1qys?si=d5xnmb4Kp2umAgpw)
 
@@ -493,10 +508,9 @@ Mount St Helens:
 - Transfer of mass from solid to aqueous state
 - **Congruent dissolution:** all constituents of individual molecule separated and remain in solution
 - **Incongruent:** some released ions recombine to create new compounds and secondary minerals
+- Calcite dissolution is reversible: as broken down carbonates travel further down and if they reach some underground cavity, conditions different (evaporation, increased pH, decreased CO~2~), and they precipitate calcite again (cave geomorphology, speleothems)
 
 ![](pics/ph_solubility.jpg)
-
-- Calcite dissolution is reversible: as broken down carbonates travel further down and if they reach some underground cavity, conditions different (evaporation, increased pH, decreased CO~2~), and they precipitate calcite again (cave geomorphology, speleothems)
 
 #### Hydrolysis
 
@@ -514,7 +528,7 @@ Mount St Helens:
 
 - Incorporation of water molecules into crystal structure of minerals
 - Sometimes considered as physical weather, but here consider as chemical because occurs at lattice level
-- Reversible
+- **Reversible**
 - Gypsum vs anhydrite: gypsum very soft, anhydrite much harder
 
 ### Factors affecting weathering
@@ -535,7 +549,7 @@ Mount St Helens:
 
 - Limestone and marble (metamorphosed limestone) dissolve easily in weakly acidic environments; carbonic acid abundant in environment (H^+^ and CO~2~)
     - Depends on partial pressure of CO~2~, so soil water highly effective
-- **Karst:** distinctive landscape that forms from highly soluble rocks, usually limestone
+- **Karst:** distinctive landscape that forms from highly soluble rocks, usually limestone (i.e., *carbonate rocks*)
     - Unique drainage pattern resulting from karst processes
     - Slavic-Italian (*kras-carso*): bleak waterless place, or bare rock surface
     - When water falls on surface, tends to go belowground quickly
@@ -545,6 +559,8 @@ Mount St Helens:
     - Dolomite (MgCO~3~) has Mg instead of Ca
     
 ![](pics/carbonate_rocks.png)
+
+![](pics/karst_dist.jpg)
 
 ### Karst landforms
 
@@ -564,6 +580,8 @@ Mount St Helens:
 - More precipitation; more soil and vegetation, warmer temperatures
 - **Cockpit karst:** like closed depressions, but more pronounced hills between (top-down)
 - **Tower karst:** steep-sided, may not have vegetation (e.g., Guilin, China)
+
+![Chocolate Hills, Philippines](pics/choc_hills_philip.jpg)
 
 ### Caves and speleothems
 
@@ -941,7 +959,7 @@ NOAA – River predictions http://www.weather.gov/
 
 **2026-10-05**
 
-- Fluvial systems move water and sediment from continents to oceans
+- Fluvial systems move water and sediment from continents to oceans (**process-based domains**)
     - Collecting region: dominated by erosion
     - Transporting: region moving water and sediment along
     - Dispersing region: dominated by dispersion
@@ -955,6 +973,7 @@ NOAA – River predictions http://www.weather.gov/
 - Downstream extent (single location) is selected to fulfull needs of analysis
 - Bounded by **drainage divides**: topographical boundaries separating runoff and groundwater
     - Separates one basin from a neighbouring basin; ridges and highlands that mark the limits of the catchment area of the drainage basin
+- Three terms mostly synonymous, though non-American use of "watershed" refers more to drainage divies (topographical highs separating basins), and catchments are usually smaller subparcels within the overall drainage basin (usually for large-scale systems like entire rivers)
 - Delineating watersheds:
     - Determine area that contributes to single (defined) outlet location
     - Trace topographic high (divide) using elevation data
@@ -962,14 +981,14 @@ NOAA – River predictions http://www.weather.gov/
     - Can define watershed for any point along any stream in a stream network
     - Most water authorities prefer maps at basin level rather than political/admin maps (e.g., below Louisiana river basins)
     
-***inc LA river basin map here***
+![](pics/la_river_basins.jpg)
 
 ## Drainage patterns
 
 - Largely controlled by underlying geologic structure
 - Most common is dendritic, but others exist
 
-***photo of drainage patterns**
+![](pics/drainage_patterns1.png){width="49%"} ![](pics/drainage_patterns2.png){width="49%"}
 
 - Dendritic: uniform rock composition and moderate slopes
 - Trellis: dipping (monocline) or folded topography with differential weathering (kinda parallel to ridges)
@@ -984,19 +1003,17 @@ $$
 \text{Drainage density} = \frac{\text{total length of all stream channels in basin}}{\text{area of basin}}
 $$
 
-- Degree to which basin is dissected by stream flow
-- Also affected by erodibility and permeability of rocks, steepness of slopes, and vegetation cover
-- Climate
-    - Humidity encourages vegetation cover, reduces channel formation (holding surface sediment in place)
-    - Arid: although vegetation cover i slimited, there is not enough runoff to carve extensive channel systems
-    - **Semiarid:** enough rain to produce runoff but not enough to sustain much vegetation
-        - Badlands have high drainage density
-
-$$
-R_h =  \frac{\Delta H}{l_b}
-$$
-        
+- **Drainage density:**
+    - Degree to which basin is dissected by stream flow
+    - Affected by erodibility and permeability of rocks, steepness of slopes, and vegetation cover
+    - Climate
+        - Humidity encourages vegetation cover, reduces channel formation (holding surface sediment in place)
+        - Arid: although vegetation cover is limited, there is not enough runoff to carve extensive channel systems
+        - **Semiarid:** enough rain to produce runoff but not enough to sustain much vegetation
+            - Badlands have high drainage density
 - **Relief ratio:** ratio of total basin relief to basin length
+    - $R_h =  \frac{\Delta H}{l_b}$
+    - Indicates steepness of topography within basin
     - Insight into tectonic uplift and rock resistance, downslope pathways, storage time of water, sediment and solutes
 - **Hypsometric curve:** proportion of total basin area on X and proportion of total basin height on Y, shows topographic variation/heterogeneity over the length of the basin
     - Area under the curve can be indication of watershed landscape evolution
@@ -1008,8 +1025,8 @@ $$
         - Junction of $u$ with order $<u$ remains as $u$
         - Drawback: violation of additive rule goes against physical system; properties like stream discharge can change when lower-order enters higher-order, but order of main stream remains unaltered (ignored size of basin)
     - **Shreve ordering system:**
-        - Additive system; more pppular in modern; shows magnitude
-        - Network magnitude indicates ...
+        - Additive system; more popular in modern; shows magnitude
+        - Network magnitude indicates number of exterior links upstream
         - Can then plot each split over "generations" of the basin on Y (**hydrograph**)
             - Diameter (max. link distance; no. of nodes between outlet and farthest first order tributary)
             - Generation (successive link distances from outlet to farthest first order tributary)
@@ -1019,7 +1036,11 @@ $$
 
 **2026-10-07**
 
+Above morphometric analyses require stream networks to be delineated, but how exactly do we do that?
+
 How far upstream do channels extend? Difference between channel and hillslope hollow? Perennial vs ephemeral streams?
+
+![](pics/channel_head.png)
 
 - **Channel initiation:** 
     - Channel head: upstream boundary of concentrated water flow and sediment transport, between definable banks, which separates process domains of hillslopes/unchanneled hollows from channel networks
@@ -1041,14 +1062,16 @@ Variation in slope of stream over its length. Generally, concave up, steeper at 
 
 - **Base level:** theoretical level below which a stream cannot erode (denude) its valley
     - Barely enough slope (potential energy) to sustain water flow
-- Discharge and sediment load/caliber
-    - Both increase with length of river
-    - Grain size decreases downstream; abrasion + selective sorting
+- **Causes of profile concavity:** 
+    - Discharge and sediment load/caliber both increase with length of river (lower gradient required to move load, all else being equal)
+    - Grain size decreases downstream; combined effects of abrasion + selective sorting
 - **Lane's balance:** degradation (scouring out of channel), aggradation (filling in of channel)
-- Graded stream: mutual adjustment between slope, size and shape of channel for equilibrium
+- **Graded stream:** mutual adjustment between slope, size and shape of channel for equilibrium; stream at equilibrium state between slope, size and shape of channel
 - Local increases in gradient are called **knickpoints** (waterfalls, rapids); caused by layers of resistant rocks or faulting; over time with erosion, moves upstream (e.g., Niagara Falls)
 
-***photo of Lane's balance***
+![Lane's balance: relationship typically conceptualised with Sediment Size, Sedminent Load and Stream Discharge being fixed ("predictors"), and Stream Slope as the "response" at equilibrium (graded stream). Then, in a non-equilibrium state, a change in the slope will result in either aggradation or degradation.](pics/lane_balance.jpg)
+
+- Morphological effects of dams: upstream deposition & downstream erosion
 
 ## Spatial differentiation of drainage basins
 
@@ -1058,7 +1081,13 @@ Schumm (1977): basins longitudinally zoned wrt sediment dynamics: headwater *pro
 
 - Headwater streams: sediment reservoirs at timescales of 10-100 years, episodically evacuated by debris flows and/or gully erosion
 - Higher stream order and drainage area: sediment yield per unit area decreases and sediment residence time increases
-- Coupled vs buffered links: more buffered links at higher stream order
+- Coupled vs buffered links: 
+    - How direct and fast sediment is transferred to channels from hillslopes
+    - More buffered links (floodplains/valley-fill) at higher stream order
+
+![](pics/hillslope_channel_coupling.jpg)
+
+![](pics/hillslope_channel_continuum.jpg)
 
 ### Sediment yield and landscape denudation
 
@@ -1073,16 +1102,30 @@ Schumm (1977): basins longitudinally zoned wrt sediment dynamics: headwater *pro
 
 **2026-10-12**
 
-**River dynamics trinity:** Physical changes in river channels can be explained by mutual adjustments and interactions among moving water (**flow**), **sediment** (erosion, transport, deposition), and channel form (**morphology**). (These only consider geological/hydrological context, not ecological.)
+Fluvial geomorphology is influenced by both internal and external factors. **External factors** include:
 
-Vegetation offers resistance to flow, provides reinforcement of bank material. Either riparian or in-channel vegetation (and/or debris). 
+- Climate & hydrology (ephemeral/perennial)
+- Tectonics & Geology
+    - Resistance of underlying lithology
+    - Sediment supply & caliber
+    - Channel slope
+    - Availability of storage
+    - Alluvial/bedrock
+    - Channel migration
+- Vegetation
+    - Resistance to flow (in-channel vegetation and/or debris)
+    - Reinforcement of bank material (riparian vegetation)
+
+Internal factors can be described by the **river dynamics trinity:** Physical changes in river channels can be explained by mutual adjustments and interactions among moving water (**flow**), **sediment** (erosion, transport, deposition), and channel form (**morphology**). These only consider the geologic/hydrologic context though, and not ecological.
 
 ## Flow
+
+River hydraulics: study of movement of water through river channels and balance of forces acting on that water.
 
 Gravity (driving force) and friction (due to roughness of grains, bedforms and channel curvature; resisting force). 
 
 $$
-Discharge, Q = width \times depth \times velocity
+Discharge, Q = width \times depth \times velocity = W \times D \times U
 $$
 
 Velocity depends on slope and roughness. Manning equation:
@@ -1093,21 +1136,40 @@ $$
 
 where R is hydraulic radius (area divided by wet perimeter), n is Manning roughness coefficient (can also be defined by other variables like grain size), S is slope.
 
-Froude number quantifies variability of velocity across channel
+Froude number quantifies variability of velocity across channel, determines how disturbances (e.g., surface waves) interact with moving water.
 
 $$
 Fr = \frac{U}{\sqrt{gH}}
 $$
 
-If $Fr < 1$ **subcritical** (effects spread both upstream and downstream), and if $Fr > 1$ **supercritical** (only downstream)
+If $Fr < 1$ **subcritical** (tranquil flow; effects spread both upstream and downstream), and if $Fr > 1$ **supercritical** (rapid flow; only downstream)
 
 **2026-10-14**
 
-Spatial variability (multiple cross-sections along channel at one point of time) and temporal variability (one cross-sections at multiple points of time, e.g., flood, spring/fall, summer).
+### Changes in flow/discharge
 
-Width usually does not change much with higher discharge because walls are steep (upstream). But downstream, width is usually what accommodates change in discharge.
+How do channels accommodate changes in discharge?
 
-**Hydraulic geometry relations:** relations between discharge and width, depth and velocity follow power law. 
+Hydraulic geometry: quantify change in the three flow variables (y axis) against change in discharge on x axis. 
+
+- **At-a-station** hydraulic geometry:
+    - Temporal variability
+    - One cross-section at multiple points of time, e.g., flood, spring/fall, summer
+    - At a given point in the channel, especially upstream, walls are steep so width doesn't change much 
+    - Velocity changes most (deeper flow reduces bed roughness) then depth then width
+- **Downstream** hydraulic geometry:
+    - Spatial variability
+    - Multiple cross-sections along channel at one point of time
+    - Wall steepness changes (not steep downstream)
+    - Width mostly accommodates change in flow, followed by depth, then very slightly velocity
+
+**Hydraulic geometry relations:** relations between discharge and width, depth and velocity follow power law (they are power law functions of discharge), with remarkable convergence (across rivers of the world) on specific values for coefficients in power law. 
+
+![](pics/hyd_geom_aas.jpg){width="49%"} ![](pics/hyd_geom_downstream.gif)
+
+But in downstream geometry, need to be comparing the "same" *kind* of flow (not flow level, since change in that is what is of interest; but kind, see below) at the different points. What is this flow?
+
+### Channel-formative flow
 
 - **Dominant discharge:** Single event that represents entire range of morphologically significant flows
     - Conceptual value
@@ -1116,9 +1178,12 @@ Width usually does not change much with higher discharge because walls are steep
     - Implies an event that represents equilibrium between process and form
 - **Bankfull discharge:** stage just before flow begins to overtop the banks
     - Geometric value
+    - Assumptions: defined only for self-formed depositional processes (not valid for erosional/incisional channels); channel size relatively constant through time
+    - Related to flood recurrence interval (most perennial streams have RI for bankfull discharge at 1--2 years)
 - **Effective discharge:** discharge that does most geomorphic work (sediment transport; using magnitude-frequency analysis)
+    - Geomorphic work: product of flow frequency and transport rate
     - Combination of discharge frequency histogram and non-linear sediment discharge rate (higher for infrequent high magnitude flooding events)
-- Turns out that these 3 discharge concepts are roughly the same!
+- Turns out that these 3 discharge concepts are roughly the same! (Based on RI comparisons)
 
 ## Sediment
 
@@ -1132,8 +1197,9 @@ Width usually does not change much with higher discharge because walls are steep
     - **Transport Capacity:** max. amount of sediment that can be transported by given flow
         - If dam exists, stops sediment, and downstream has more erosion
     - Sediment caliber: size (competence) and sorting
-- Hydraulics and stream transport:
-    - **Stream Power** $\Omega = \rho_w g Q S$ (rate of potential energy loss)
+- Hydraulics and stream transport: channel's ability to transport sediment increases with discharge
+    - **Stream Power** $\Omega = \rho_w g Q S$ (rate of potential energy loss per unit channel length)
+    - **Unit Stream Power** $\omega = \Omega / W = \tau U$ (per unit area of channel bed)
     - **Shear Stress** $\tau = \rho_w g H sin\theta = \rho_w g H S$ ($sin\theta$ approximates to $tan\theta$ at low slopes)
 - Load types
     - Dissolved/solution load: material dissolved in water (usually calcite or salts)
@@ -1141,28 +1207,33 @@ Width usually does not change much with higher discharge because walls are steep
     - Bed load: coarser materials moving along channel bed
         - Traction: rolling, sliding (constant contact)
         - Saltation: moving along in short hops, bouncing
-        
-**Hjulstrom diagram** ***include photo from ppt***
+
+![](pics/load_types.jpg)
+
+**Hjulström diagram:**
+
+![Hjulström diagram](pics/hjulstrom_diagram.png)
 
 - Velocity vs grain size; what velocity for erosion, transport, deposition
 - Erosion: 
     - For very small (clay-like) particles, required velocity for initial movement is high because they are cohesive and occur in clumps
-    - But after some mid-point of grain size, it becomes linear increase (intuitive)
+    - But after some mid-point of grain size (sand), it becomes linear increase (intuitive)
 - Transport:
     - For gravel, very narrow range of velocity for transport, because it very quickly starts settling down to bed (deposition)
     - Clay and silt require very little velocity once eroded to stay in transport
     
 ### Bedforms
 
-- Arrangement of sediment as waves of sand that get moved along the bed
-- Bedload types: Ripples (smallest scale, <3cm height, so small grain size), dunes (larger, 10cm to multiple m), bars (largest scale)
+- Arrangement of sediment as waves that get moved along the bed
+- Bedform types: Ripples (smallest scale, <3cm height, so small grain size), dunes (larger, 10cm to multiple m), bars (largest scale)
     - Cross-bedding: preservation of angle of trough slope of dunes through dune migration
-    - In unidirectional flows (rivers) dunes have asymmetric ripples/dunes
+    - In unidirectional flows (rivers) ripples/dunes are asymmetric 
 - Larger the bedform, more resistance there is to flow; because $Q = W H U$, larger discharges result in larger bedforms (higher H, lower U); above certain threshold flow, bedforms flatten out (restore U)
+- **Barforms:** Larger than bedforms
+    - Longitudinal, lateral, transverse
+    - Point bar (+ cutbank)
 
-***include YT video***
-
-**Barforms:** Larger than bedforms
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KYvWwbEi0A0?si=zty0sy7yBsDZawF2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Morphology
 
@@ -1183,8 +1254,8 @@ Width usually does not change much with higher discharge because walls are steep
     - Erosion along outer bank (pool & cut bank)
     - Deposition along inner bank (point bar)
 - Meander migration
-    - Any river [here](https://earthengine.google.com/timelapse/)
-    - Over time, meander bends may intersect to form **cutoffs**, which later turn into **oxbox lakes** (eventually meander stars)
+    - View on GEE any river [here](https://earthengine.google.com/timelapse/)
+    - Over time, meander bends may intersect to form **cutoffs**, which later turn into **oxbox lakes** (eventually deposited/filled in, to form meander ?stars?)
     - Neck vs chute cutoffs (distance less than one channel width, vs overbanking/flooding)
 
 ### Braided
@@ -1213,23 +1284,51 @@ Smaller scale than 4 types of rivers
 
 ## Fluvial landforms
 
+### Valleys
+
 - Valleys fundamental features of fluvial erosion
 - Generally V-shaped (unlike U-shaped of glaciers)
 - Eventually lose downcutting ability, then start valley widening 
+
+### Terraces
+
 - **Alluvial terraces:** form when change in env. conditions isolates floodplain from river channel
     - Level areas of river sediment (alluvium) stepping down toward river channel
     - Caused by river degradation (incising) due to episodic drops in base level relative to river bed (caused by uplift or drop in sea level or local base level)
     - [Video](https://mediaplayer.pearsoncmg.com/assets/hi0j429j5LerlRsY5pJNfNsRG0hKGEPa)
-- Straft terraces: flat bedrock instead of alluvium
-- Floodplain:
-    - Most rivers around the world reach bankfull/dominant discharge every 1--3 years, so very much active part of river system
-    - Floodpains are storage area for water during floods, and for sediment over decades/centuries
-    - Formation by:
-        - **Lateral accretion:** sediment on point bars as river migrates across valley bottom
-        - **Vertical accretion:** fine sediment that falls out of suspension during floods
-            - Deposition occurs because flow slows as soon as leaves channel
-            - Natural levees form: alluvium deposits directly over channel banks, forms ridge following channel banklines
-            - Self-limiting process
-            - Back levee (engineered): allow for flooding corridor
+- Strath terraces: flat bedrock instead of alluvium
+
+### Floodplains
+
+Most rivers around the world reach bankfull/dominant discharge every 1--3 years, so floodplains very much active part of river system. They are the storage area for water during floods, and for sediment over decades/centuries. They are formed by:
+
+- **Lateral accretion:** sediment on point bars as river migrates across valley bottom
+- **Vertical accretion:** 
+    - **Overbank deposition:**
+        - Deposition of fine sediment that falls out of suspension during floods, because flow slows as soon as leaves channel
+        - Natural levees form: alluvium deposits directly over channel banks, forms ridge following channel banklines
+        - Self-limiting process
+        - Yazoo channel: 
+            - In large floodplains and deltas
+            - Water coming down from valley walls can no longer connect to main channel
+            - End up forming tiny channels off to the side
+            - Themselves may show all the same fluvial properties/patterns: not always neat linear channels
+            - Named after actual Yazoo River (NE corner of LA, border with MS)
+        - Man-made levees: higher levees usually become problematic downstream, since they increase the velocity and depth of the flow, meaning flood events hit that much harder
+        - Setback levee (engineered): 
+            - Placed farther away from natural banks, expands channel capacity
+            - Allows for flooding corridor: designated, controlled path where the river can naturally spill over into its floodplain
+            - The norm in places like Netherlands, but in the US levees have mostly been built right at the river's edge
+    - **Avulsion:**
+        - Non-meandering channel with frequent floods: entire channel rises up due to deposition, eventually causing an abrupt switch in the main river stem
+        - (Like desire paths, seeks the steeper path from A to B lateral to the original stem)
+        - Repeat: starts building up there, then another switch
+        - Non-meandering: not much lateral movement, so starts forming web-like channel structure
     
 ![](pics/floodplain_construction.jpg)
+
+::: {.callout-tip title="Alluvium and regolith"}
+Broadly speaking, there is no distinction between material produced from weathering in one place, versus material that settles somewhere after transportation post-erosion. So, alluvium deposits that settle somewhere are technically a part of the regolith there. However, regolith is sometimes further grouped into ex-situ and in-situ based on the provenance of the material. 
+
+How to ascertain provenance? Commonly using isotope analysis, but none of the usual ecological ones: carbon doesn't tell too much, but uranium (vertical age stratification using decay times) and caesium (more about *where from*) are useful. Another common method is analysing zircon, a mineral highly resistant to erosion, which can tell you where the alluvium came from and how old it is.
+:::
