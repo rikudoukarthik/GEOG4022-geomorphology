@@ -1337,3 +1337,248 @@ Broadly speaking, there is no distinction between material produced from weather
 
 How to ascertain provenance? Commonly using isotope analysis, but none of the usual ecological ones: carbon doesn't tell too much, but uranium (vertical age stratification using decay times) and caesium (more about *where from*) are useful. Another common method is analysing zircon, a mineral highly resistant to erosion, which can tell you where the alluvium came from and how old it is.
 :::
+
+# Hillslopes and mass wasting
+
+**Missed class on 26 Oct (entry seminar)**
+
+- Erosion: denudation by flowing water, wind or ice, which dislodges, dissolves or removes surface material
+- Transport: actual movement of weathered and eroded materials by transporting agent like water, wind or ice
+- Mass movement: any movement of material under influence of gravity, with little or no transporting agent (collective term, all gravitational downslope movement of rock, weathered rock debris, or soil)
+
+Fluvial vs hillslopes, alluvial vs colluvial
+        
+![](pics/hillslope_types.jpg)
+
+## Hillslopes
+
+- Diffusive processes
+- Usually imperceptible changes
+- Downslope transport rate proportional to local gradient
+- **Rainsplash:** impact from raindrops dislodges soil and sediment on surface (important in sparsely vegetated terrains)
+- **Sheetwash:** shallow, non-concentrated overland flow, more effective in sparsely vegetated terrain (vegetation slows overland flow and increases infiltration rates)
+- **Creep:** Incremental downslope movement of soil and sediment (extremely slow, mm/yr); continuous (clays) vs seasonal (frost heaving)
+- 
+
+![](pics/creep_heave.jpg)
+
+**2026-10-28**
+
+## Mass wasting
+
+- Synonymous with mass movement
+- Gravity-driven events moving colluvial material downslope
+- **Colluvium:** unsorted, mobile hillslope material that overlies a more stable substrate
+- Perceptible changes (e.g., natural hazards)
+- Water usually plays important role, but not as transporting agent (as in rivers and glaciers)
+- Balance between shear stress and shear strength (which is affected by water content)
+
+### Examples
+
+- Earthflow ([video](http://www.youtube.com/watch?v=R__3DYQCVnA))
+- Coarser material, faster pace ([video](http://www.rts.ch/video/info/journal-continu/4913479-effondrement-d-une-falaise-a-riddes-vs.html))
+- Avalanche ([video](https://www.youtube.com/watch?v=82JOJ3Yq3KA))
+    - Characteristic is not necessarily snow/ice, but entraining of air within (billowing form)
+    - Rock avalanche ([video](https://www.youtube.com/watch?v=SK38UDPhQEk))
+- Debris flow, also coarser material (boulders) riding on top of finer material ([video](https://www.youtube.com/watch?v=8mKC3eID074))
+    - Sometimes water caught within it, but that's not causing transport ([video](https://www.youtube.com/watch?v=MDcze8yaa64))
+    - Size of boulders and how they move ([video](https://www.youtube.com/watch?v=Fsh5E9m3PrM)) (fluvial vs colluvial process)
+- Nepal ([video](https://www.youtube.com/watch?v=oVrKzYP476s))
+
+### Forces involved
+
+Earthquakes, heavy rainfall (adds buoyancy), etc. are what change the balance of driving and resisting forces. The resisting forces (like friction) typically have a maximum value.
+
+**Shear strength:** function of three components: (1) angle of internal friction (2) normal stress (3) cohesion
+
+- **Angle of repose:** maximum angle that grains can create when stacked (e.g., sand dumped in conical form)
+- **Angle of internal friction:** related to degree of interlocking between particles and the surface roughness of the material
+    - Approximated by angle of repose
+    - Higher angle for coarser sand, and for angular pebbles
+- Normal stress
+    - Component of gravitational force that is perpendicular to slope; decreases as slope increases
+    - Contributes to friction between material and slope, which tends to hold material in place
+- Cohesion
+    - Stickiness of particles to each other
+    - Related to electrochemical attraction between soil particles
+    - Strongest in fine clays
+    
+**Effective shear strength:** Coulomb equation
+
+$$
+SS = C + \sigma' tan(\psi)
+$$
+
+Cohesion, effective normal stress (accounting for buoyancy), angle of internal friction
+
+**Slope stability:** Factor of Safety Ratio (F)
+
+$$
+F = \frac{Shear\ Strength}{Shear\ Stress}
+$$
+
+If F < 1, unstable, prone to mass movement. If F > 1, stable, not prone to mass movement. If F = 1, threshold, may or may not move. Generally, F around 1.5 could be prone to failure, while 2--3 less susceptible. 
+
+### Role of water
+
+Little bit increases friction due to surface tension (cohesion?), but too much reduces friction because particles no longer touching. 
+
+**Pore water pressure:** When water is saturated within pore spaces (phreatic zone), hydrostatic pressure is a good estimate of pore water pressure. In unsaturated zone (vadose zone), water held by capillary stresses can result in negative pore water pressure, increase slope stability. Also important process in river bank failures. 
+
+![](pics/cohesion.jpg)
+
+- Quantifying cohesion
+    - Direct Shear Box
+    - Apply different normal stresses to sample, then apply shear stress until failure
+    - Linear regression: cohesion = y intercept, internal friction angle = slope
+- Slope Stability Analysis
+    - Infinite slope (single block on slope)
+    - Method of slices (vertical slices, add up individual properties and values)
+
+### Role of vegetation
+
+- Adds to resisting force (shear strength)
+    - Interception of rainfall
+    - Uptake of ground water by roots
+    - Root reinforcement (anchor)
+    - Soil development (cohesion)
+- In practice, lump the effects into cohesion; express vegetation as an apparent cohesion
+    - Measure/model tensile strength of roots to hold slope material
+        - Device called root puller
+
+![](pics/cohesion_vegetation.jpg)
+
+## Classifying mass movements
+
+- Processes driving these are continuously varying, but we're trying to fit nice distinct rigid boundaries, so imperfect system but useful
+- Broadly based on type of material and type of movement (Varnes 1978)
+- 
+
+![](pics/mass_movement_class.gif)
+
+![](pics/mass_movement_class_pics.png)
+
+**2026-10-30**
+
+![](pics/mass_movement_class_three.jpg)
+
+### Slide: translational (planar)
+
+- Sudden, rapid movement of material along flat failure place that is parallel to ground surface
+- Block moves with little to no internal disruption
+
+### Slide: rotational (slump)
+
+- Rotational failure of material along concave upward failure surface
+- Common in thick cohesive soils
+- Some internal disruption
+
+![](pics/rotational_slide.jpg)
+
+### Fall: rockfall
+
+- Fast and dry
+- Falling pieces of rock downslope
+- Forms "talus" slope (pile of rock pieces at angle of repose)
+- Common in mountainous areas and areas with freeze-thaw weathering
+
+Video [1](http://www.youtube.com/watch?v=QdsxtCtX5nk) and [2](https://www.youtube.com/watch?v=qcrRf8wY8YE)
+
+
+### Flows
+
+- Solifluction (slow and wet): Slow flow of soil saturated with water, forms lobes; related to freeze-thaw
+- Earth flow (slowest flow, lower moisture content)
+    - [Italy](http://youtu.be/E5FF3vIEIqg)
+- Debris flow (fast, lower moisture content)
+    - Coarser debris usually in front (snout), top layer; debris becomes finer farther from snout
+    - Brazil Nut effect (coarser particle rises up in container with disturbances)
+    - [Afghanistan](https://youtu.be/51C7vEAVbxk?si=BVjXb9OOuy-3h63c)
+- Mud flow (fast, highest moisture content)
+
+Supersaturation of material with water leads to thick paste or ooze moving downslope. But water is not the transporting agent, does not itself exert shear stress on the material. Water simply reduces shear strength of the material. 
+
+## Slope morphology
+
+One way to understand how prone landscape is to mass wasting events, important for planning. 
+
+Convex slopes usually not prone to mass wasting, they simply diverge/push material into concave hollows/slopes. 
+
+![](pics/diffusive_advective.jpg)
+
+[Debris flow barriers](https://www.youtube.com/watch?v=ODE1OtTwCfI)
+
+# Aeolian Geomorphology
+
+**2026-11-04**
+
+- Aeolus, Greek god of wind
+- Processes of erosion, transportation and deposition by wind, and the resulting landforms
+- Wind moves air that is generated by pressure differences in atmosphere
+    - Higher pressure gradients = high wind velocity
+- Topography can also influence winds: orographic lift (vertical), horizontal confinement
+- Trees, buildings, rocks, etc. provide roughness and form drag, increases turbulence locally, results in dissipation of kinetic energy and overall reduction in wind velocity
+
+![](pics/wind_dist.jpg)
+
+- Velocity of wind determines largest grain size that can be moved
+    - To move 1mm sand grain, wind speed required 45 cm/s, water speed 20 cm/s (due to buoyancy, lower viscosity)
+    - Water is more viscous than air, so settling velocity is slower than in air
+- Loess: typically silt (fine-grained), sediment that gets lifted then settles and blankets landscapes
+
+![](pics/wind_transport.jpg)
+
+![](pics/settling_curves.jpg)
+
+- Aeolian process important in:
+    - Deserts (dry with little vegetation cover)
+    - Where sediment supply overwhelms vegetative stabilisation (sandy coasts, intensively cultivated land, glacial outwash plains)
+- [Self-organisation of sand in ripples and dunes](https://www.pbs.org/video/sand-dunes-shouldnt-exist-heres-why-they-do-bkmh9e/)
+    - Ripples are result of sand-sand interaction
+    - Dunes are result of sand-wind interaction
+- Most sand moves by saltation, very fine occasionally by suspension, and coarse sand moves along the ground my surface creep (traction)
+    - Once suspended, can travel for very long distances ([Saharan Dust to Amazon rainforest](https://www.voanews.com/a/study-saharan-desert-dust-feeds-amazon-rainforest/2676025.html))
+
+![](pics/wind_transport_dist.jpg)
+
+## Aeolian erosion
+
+- **Deflation:** removal of fine-grained components of top layer of sediment, leaving behind a coarse surface, called **deflation/desert pavement**
+- **Abrasion:** wind carrying saltating sand can effectively sandblast rock surfaces
+    - Limited to 1-2m above ground
+    - **Ventifacts:** rock shaped by wind abrasion, creating angular shape or narrow neck close to ground
+    - **Yardangs:** wind-sculpted streamlined/elongated hills (m to km in scale), indicate dominant wind direction
+        - Larger in scale than ventifacts
+- **Hamadas:** deflation + abrasion
+    - Desert rock surfaces or plateaus with little or no sand
+    - More typical of deserts than popular "sand seas"
+- Dust/sand storms: hugely erosional (abrason + deflation)
+    - [Australia video](https://www.youtube.com/watch?v=95tmYmeHf84)
+
+## Aeolian deposition
+
+- **Loess:** silt sediment when transported by wind
+    - Widespread wind-blown deposits mainly of silt, blankets landscape
+    - Tunica Hills, LA & Natchez, MS
+
+![](pics/loess_dist.jpg)
+
+- **Ripples:** small asymmetric ridges related to length scale of saltation
+- **Dunes:** asymmetric hills of sand, bigger than ripples, tend to migrate downwind unless stabilised with vegetation
+    - **Barchan:** crescent-shaped, wind toward horns
+        - Relatively short horns, apex is wide
+        - Limited sand supply
+        - Unidirectional wind
+        - Little-no vegetation
+        - Resistant substrate
+        - Migrate (move)
+    - **Parabolic:** crescent-shaped, wind toward concave side
+        - Long horns/arms, narrow apex
+        - Do not migrate, arms anchored by vegetation
+        - Erodible substrate (U-shaped "blowout")
+        - Common on coastlines
+    
+
+![](pics/dune_classification.jpg)
+
+- **Ergs:**
