@@ -1,0 +1,412 @@
+---
+title: "Fluvial Geomorphology Lab"
+author: "Karthik Thrikkadeeri"
+bibliography: ../references.bib
+csl: "../geomorphology.csl"
+format: 
+  html: 
+    embed-resources: true
+  docx:
+    reference-doc: "../word_template.docx"
+    number-sections: false
+    embed-resources: true
+knitr:
+  opts_chunk:
+    echo: false
+    warning: false
+    message: false
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup}
+library(tidyverse)
+library(ggplot2)
+library(lubridate)
+library(here)
+
+# Sand Creek data
+
+# table 1 (copying manually from docx)
+sand_creek_stations <- tibble(
+  station = 1:8,
+  distance = c(0.685, 2.055, 3.425, 4.795, 6.165, 7.535, 8.905, 10.275), # not width of cross-section, distance from one bank
+  depth = c(0.12, 0.22, 0.25, 0.3, 0.31, 0.32, 0.28, 0.18),
+  velocity = c(0.058, 0.85, 0.92, 0.35, 0.26, 0.23, 0.16, 0.1)
+)
+
+# table 2 (copying manually from docx)
+sand_creek_stage <- tibble(
+  date = c("2003-10-15", "2004-03-13", "2004-10-13", "2005-10-26"),
+  discharge = c(0.44, 1.93, 0.36, 0.21),
+  stage = c(1.49, 1.81, 1.47, 1.39)
+) |> 
+  mutate(date = as_date(date))
+
+
+# Yebba River data, 10 year period 
+
+# table 3 
+yebba_discharge_bedload <- tibble(
+  discharge = c(150, 300, 500, 700, 1000, 3000, 5000),
+  bedload = c(1000, 3000, 8000, 20000, 90000, 1000000, 2000000)
+)
+
+# table 4
+yebba_flow_freq <- tibble(
+  discharge_class = c("0-500", "500-1000", "1000-1500", "1500-2000", "2000-2500", "2500-3000", 
+                      "3000-3500", "3500-4000", "4000-4500", "4500-5000", "5000-5500", "5500-6000", 
+                      "6000-6500", "6500-7000", "7000-7500", "7500-8000", "8000-8500", "8500-9000", 
+                      "9000-9500", "9500-10000"),
+  num_days = c(2086, 786, 254, 161, 103, 74, 53, 39, 27, 19, 14, 9, 7, 5, 4, 3, 2, 2, 1, 1)
+)
+
+# table 5
+yebba_max_daily_discharge <- tibble(
+  year = c(1992, 1990, 1986, 1989, 1991, 1994, 1985, 1988, 1987, 1993),
+  max_discharge = c(9750, 7900, 6200, 5550, 5150, 4300, 4060, 3500, 3300, 3000)
+)
+
+```
+
+# Part 1: Discharge for a small creek
+
+Using the data provided in Table 1, determine the discharge for the given cross-section. To determine the discharge, complete the tasks below in Excel and turn in with the assignment.
+
+1. Make a plot for the cross-section, with distance along the x-axis and water depth along the y-axis.
+
+```{r}
+#| label: fig-cs
+#| fig-width: 6
+#| fig-cap: "Cross-section of Sand Creek, showing how water depth changes from one bank to the other."
+
+sand_creek_stations |> 
+  ggplot(aes(x = distance, y = -depth)) +
+  geom_line() +
+  geom_point() +
+  theme_classic() +
+  labs(x = "Distance from bank (m)", y = "Water depth (m)") +
+  scale_x_continuous(expand = c(0, 0), limits = c(0, 11), position = "top") +
+  scale_y_continuous(labels = abs, limits = c(0, -0.35))
+```
+
+2. Add a column to the table for discharge within each section. (Hint: Q = W*D*U)
+
+```{r}
+#| label: tbl-discharge-sand-creek
+#| tbl-cap: "Data for Sand Creek cross-section, showing section-wise discharge."
+
+sand_creek_summ <- sand_creek_stations |> 
+  mutate(width = distance - lag(distance, default = 0),
+         discharge_per_section = width * depth * velocity)
+
+sand_creek_summ |> 
+  magrittr::set_colnames(c("Station", "Distance (m)", "Depth (m)", "Velocity (m/s)", "Width (m)", "Section-wise discharge (m^3/s)")) |> 
+  knitr::kable()
+```
+
+3. Calculate the total discharge for this cross-section.
+
+Total discharge is `r sum(sand_creek_summ$discharge_per_section)` m^3^/s.
+
+<br> <br>
+
+Now make a stage-discharge rating curve using the data provided in Table 2. For this plot, discharge should be on the x-axis and stage should be on the y-axis. Answer the following questions.
+
+```{r}
+# setup for rating curve
+
+rating_lm <- lm(stage ~ log(discharge), data = sand_creek_stage)
+rating_lm_coefs <- round(coef(rating_lm), 2)
+rating_lm_equation <- paste("y =", rating_lm_coefs[1], "+", rating_lm_coefs[2],
+                            "* log(x)")
+rating_lm_annot <- paste0(rating_lm_equation, "\nr = ", 
+                         round(sign(rating_lm_coefs[2]) * sqrt(summary(rating_lm)$adj.r.squared), 2))
+
+stage_discharge_new <- sand_creek_stage |> 
+  reframe(discharge = seq(min(discharge), max(discharge), by = 0.01))
+
+predicted <- predict(rating_lm, newdata = stage_discharge_new, interval = "confidence")
+
+stage_discharge_new <- stage_discharge_new |> 
+  bind_cols(predicted) |> 
+  rename(stage = fit)
+
+```
+
+1. Add a trendline to the data plot using a logarithmic regression, and display the equation and correlation coefficient to the graph. Use this equation to help answer the question. Show your work below and on the graph.
+
+```{r}
+#| label: fig-rating-curve
+#| fig-width: 6
+#| fig-cap: "Stage-discharge rating curve for Sand Creek."
+
+summary(rating_lm)
+
+sand_creek_stage |> 
+  ggplot(aes(x = discharge, y = stage)) +
+  geom_point() +
+  geom_ribbon(data = stage_discharge_new, mapping = aes(ymin = lwr, ymax = upr),
+              fill = "grey", alpha = 0.5) +
+  geom_line(data = stage_discharge_new, col = "red") +
+  annotate("text", x = 1.6, y = 1.5, label = rating_lm_annot) +
+  labs(x = "Discharge (m^3/s)", y = "Stage (m)") +
+  theme_classic() 
+
+```
+
+2. Based on the discharge you calculated above, what would the corresponding stage be? Use the regression equation to answer. Show work below and on the graph.
+
+```{r}
+
+new_stage <- predict(rating_lm, 
+                     newdata = data.frame(discharge = sum(sand_creek_summ$discharge_per_section)),
+                     se.fit = TRUE)
+```
+
+Using regression equation and substituting $x =$ `r sum(sand_creek_summ$discharge_per_section)`, the new stage would be `r new_stage$fit` m. 
+
+3. How confident are you in the prediction and why?
+
+Not very confident even though p < 0.05, because the regression is based on only four data points, and the part of the rating curve we are predicting especially does not have past data points. This is also indicated by the increase in uncertainty towards higher values of discharge.
+
+4. Do we have enough data to construct a good stage curve, and why?
+
+No, as indicated by the confidence interval in @fig-rating-curve. We only have four data points, and they are from extreme values of discharge, whereas intermediate discharge values have not been mapped to associated stage values.
+
+# Part 2: Effective discharge
+
+Use the following data of measured discharge and bedload, and frequency of discharge for a 10 year period for the Yebba River in northwestern Montana to complete the tasks and questions below.
+
+1. Plot bedload as a function of discharge using the data in Table 3. Remember to label the axis with units. Plot as points.
+
+```{r}
+#| label: fig-bedload-discharge
+#| fig-width: 6
+#| fig-cap: "Bedload transport rate as a function of discharge, in Yebba River, Montana, USA."
+
+yebba_discharge_bedload |> 
+  ggplot(aes(x = discharge, y = bedload)) +
+  geom_point() +
+  labs(x = "Discharge (m^3/sec)", y = "Bedload transport rate (kg/day)") +
+  theme_classic() 
+```
+
+2. Now change the x and y axes to logarithmic scale, and add a power trendline to the graph. Display the equation and correlation coefficient on the graph (Hint: the equation should have the form of ). Include this graph as a separate figure.
+
+```{r}
+#| label: fig-bedload-discharge-power
+#| fig-width: 6
+#| fig-cap: "Power relationship between bedload transport rate and discharge, in Yebba River, Montana, USA."
+
+library(ggpmisc)
+
+yebba_discharge_bedload |> 
+  ggplot(aes(x = discharge, y = bedload)) +
+  geom_point() +
+  labs(x = "Discharge (m^3/sec)", y = "Bedload transport rate (kg/day)") +
+  theme_classic() +
+  scale_x_log10() +
+  scale_y_log10(labels = scales::label_number()) +
+  geom_smooth(method = "nls", formula = y ~ a * x^b, 
+              method.args = list(start = list(a = 1, b = 1)), 
+              se = FALSE, 
+              color = "red") +
+  stat_fit_tidy(method = "nls", sanitize.names = TRUE,
+                method.args = list(formula = y ~ a * x^b, 
+                                   start = list(a = 1, b = 1)),
+                mapping = aes(label = sprintf("y == %.2f * x^%.2f", 
+                                              after_stat(a_estimate), 
+                                              after_stat(b_estimate))),
+                parse = TRUE,
+                label.x = "left", label.y = "top") +
+  # correlation coefficient (shifted down using label.y = 0.88)
+  stat_correlation(
+    mapping = use_label("r"), # linear correlation
+    small.r = TRUE,
+    label.x = "left",
+    label.y = 0.88
+  )
+```
+
+3. Using the rating curve of sediment and water discharge, determine the total mass of sediment transport by each flow-magnitude class during the 10 years of record provided in Table 4. For this task, use the mean value of each discharge class (i.e. 250 for 0-500). Add columns to the table for the following: mean discharge of class, bedload transport rate (kg/day), total bedload (kg), and total bedload for each class (1000 kg). Don’t forget units in the table headings.
+
+```{r}
+#| label: tbl-flow-freq-bed
+#| tbl-cap: "Flow-frequency data, and associated bedload (sediment) transport per discharge class, for Yebba River, Montana, USA. Bedload transport rate calculated for each class using y = 0.93 x^1.48^."
+
+classwise_bedload_transport <- yebba_flow_freq |> 
+  separate_wider_delim(cols = discharge_class, cols_remove = FALSE, 
+                       delim = "-", names = c("discharge_lwr", "discharge_upr")) |> 
+  mutate(discharge_lwr = as.numeric(discharge_lwr),
+         discharge_upr = as.numeric(discharge_upr)) |> 
+  mutate(discharge_mean = (discharge_lwr + discharge_upr)/2) |> 
+  mutate(bed_trans_rate = 0.93 * discharge_mean^1.48,
+         tot_bed_class = (bed_trans_rate * num_days)/1000)
+
+classwise_bedload_transport |> 
+  select(-discharge_lwr, -discharge_upr) |> 
+  magrittr::set_colnames(c(
+    "Discharge class (m^3/s)", "# of days", "Mean discharge of class (m^3/s)",
+    "Bedload transport rate (kg/day)", "Total bedload transport per class (1000 kg)"
+  )) |> 
+  knitr::kable()
+```
+
+4. After the last row of data in your new table, include the total number of days and total bedload in the appropriate columns.
+
+I'm including it as a separate table because that's easier to do in R:
+
+```{r}
+#| label: tbl-flow-freq-summ
+#| tbl-cap: "Summary of flow-frequency data, showing total days of observation and total bedload transported in kg."
+
+classwise_bedload_transport |> 
+  reframe(tot_days = sum(num_days),
+          tot_bed = sum(tot_bed_class) * 1000) |> 
+  magrittr::set_colnames(c("Total days", "Total bedload (kg)")) |> 
+  knitr::kable()
+```
+
+5. Plot the total bedload for 10 years as a function of water discharge (i.e. mean discharge of each class).
+
+```{r}
+#| label: fig-bedload-10year
+#| fig-width: 6
+#| fig-cap: "Total bedload transported over 10-year period across discharge classes (mean discharge) in Yebba River, Montana, USA."
+
+classwise_bedload_transport |> 
+  ggplot(aes(x = discharge_mean, y = tot_bed_class)) +
+  geom_point() +
+  labs(x = "Mean discharge of class (m^3/s)", y = "Total bedload per class (1000 kg)") +
+  theme_classic() 
+```
+
+6. Which discharge class is responsible for transporting the most sediment? What is the fraction of total bedload transported? This discharge represents the effective discharge.
+
+I am showing the code used for this step:
+
+```{r}
+#| label: tbl-eff-dis
+#| tbl-cap: "Summary of bedload transport and discharge frequency for different discharge classes in Yebba River, Montana, USA, arranged in descending order of total bedload transport."
+#| echo: true
+
+discharge_freq <- classwise_bedload_transport |> 
+  arrange(desc(tot_bed_class)) |> 
+  select(discharge_class, discharge_mean, num_days, tot_bed_class) |>
+  # fraction of total bedload by each discharge class
+  mutate(frac_bed = tot_bed_class/sum(tot_bed_class),
+         # frequency of each discharge class
+         freq_discharge = num_days/sum(num_days))
+
+discharge_freq |>
+  magrittr::set_colnames(c(
+    "Discharge class (m^3/s)", "Mean discharge of class (m^3/s)", "# of days", 
+    "Total bedload transport per class (1000 kg)", "Fraction of total bedload",
+    "Frequency of discharge"
+  )) |> 
+  knitr::kable()
+
+# effective discharge
+eff_discharge <- discharge_freq |> slice(1)
+```
+
+The effective discharge is in the class of `r eff_discharge$discharge_class`, which transports `r round(eff_discharge$frac_bed*100, 2)`% of the total bedload.
+
+7. How frequently does the effective discharge occur (i.e. time period of effective discharge/total time)? Show your work.
+
+This effective discharge occurs at a frequency of `r eff_discharge$freq_discharge`, or in other words, once in `r round(eff_discharge$freq_discharge * 10, 1)` years. (Please see @tbl-eff-dis for work.)
+
+8. What fraction of the total bedload (i.e. all classes for 10 years) is moved by the effective discharge class? Show your work.
+
+This seems like the same question as Q6, apologies if I'm missing something here. The effective discharge is in the class of `r eff_discharge$discharge_class`, which transports `r round(eff_discharge$frac_bed*100, 2)`% of the total bedload.
+
+9. Based on your answers to questions 7 and 8, briefly discuss the results and the implications for geomorphic activity by flood events.
+
+Flood events span a wide range of discharge/flow values. Counterintuitively, it is not the high values of discharge that perform the most geomorphic work. For instance, extreme floods with 9500-10000 m^3^/s discharge are so rare that they transport very little bedload in total over a given time period (@fig-bedload-10year, @tbl-eff-dis). On the other hand, it is not the most frequent discharge either that does the most work: 0-500 m^3^/s floods which occur at a frequency of 0.57 are only responsible for 6.8% of the total geomorphic work in this case. The effective discharge is defined by a combination of flow and frequency.
+
+10. Using the data provided in Table 5, make a plot of recurrence interval (R.I., y-axis) as a function of discharge (x-axis). Make the y-axis a logarithmic scale, and add an exponential trendline to the graph. Display the equation and correlation coefficient in the graph. To make the figure, rank the 10 maximum discharge values in each year from largest to smallest flood. Add this information as a column in the table. Then add a column for R.I. using the following equation , where n is the total number of years of record and m is the rank of each flood.
+
+Regression summary:
+
+```{r}
+#| label: tbl-rec-int
+#| tbl-cap: "Recurrence intervals for different flood events defined by their maximum discharge, in Yebba River, Montana, USA."
+
+yebba_max_daily_discharge <- yebba_max_daily_discharge |> 
+  mutate(rank = dplyr::min_rank(-max_discharge),
+         n = n_distinct(year),
+         rec_int = (n + 1)/rank) |> 
+  mutate(rec_int_log = log(rec_int))
+
+rec_int_lm <- lm(log(rec_int) ~ max_discharge, data = yebba_max_daily_discharge)
+rec_int_lm_coefs <- round(coef(rec_int_lm), 5)
+rec_int_lm_equation <- paste("log(y) =", rec_int_lm_coefs[1], "+", rec_int_lm_coefs[2],
+                             "* x")
+rec_int_lm_annot <- paste0(rec_int_lm_equation, "\nr = ", 
+                           round(sign(rec_int_lm_coefs[2]) * sqrt(summary(rec_int_lm)$adj.r.squared), 3))
+
+rec_int_new <- yebba_max_daily_discharge |> 
+  reframe(max_discharge = seq(eff_discharge$discharge_mean - 500, 
+                              max(max_discharge), 
+                              by = 1))
+
+predicted <- predict(rec_int_lm, newdata = rec_int_new, interval = "confidence",
+                     type = "response")
+
+rec_int_new <- rec_int_new |> 
+  bind_cols(predicted) |> 
+  mutate(fit = exp(fit)) |> 
+  rename(rec_int = fit)
+
+fig_y <- rec_int_new |> 
+  reframe(labels = round(seq(0, ceiling(max(rec_int)), length.out = 10), 1),
+          breaks = log(labels))
+
+#
+
+summary(rec_int_lm)
+
+yebba_max_daily_discharge |> 
+  select(-n, -rec_int_log) |> 
+  magrittr::set_colnames(c(
+    "Year", "Max. discharge (m^3/s)", "Rank", 
+    "Recurrence interval"
+  )) |> 
+  knitr::kable()
+
+```
+
+11. What is the recurrence interval of the effective discharge? Use the regression equation AND the table/graph to estimate the value. Show work below and on graph.
+
+```{r}
+ri_ed <- exp(rec_int_lm_coefs[[1]] + rec_int_lm_coefs[[2]] * eff_discharge$discharge_mean)
+```
+
+```{r}
+#| label: fig-rec-int
+#| fig-width: 6
+#| fig-cap: "Exponential relationship between recurrence intervals of different flood events and their maximum discharge, in Yebba River, Montana, USA."
+
+yebba_max_daily_discharge |> 
+  ggplot(aes(x = max_discharge, y = rec_int_log)) +
+  geom_point() +
+  geom_ribbon(data = rec_int_new, mapping = aes(y = rec_int, ymin = lwr, ymax = upr),
+              fill = "grey", alpha = 0.5) +
+  geom_line(data = rec_int_new, mapping = aes(y = log(rec_int)), col = "red") +
+  annotate("text", x = 4000, y = 2, label = rec_int_lm_annot) +
+  labs(x = "Maximum discharge (m^3/s)", y = "Recurrence interval") +
+  scale_y_continuous(labels = fig_y$labels,
+                     breaks = fig_y$breaks) +
+  geom_vline(xintercept = eff_discharge$discharge_mean, linetype = "dotted") +
+  geom_hline(yintercept = log(ri_ed), linetype = "dotted") +
+  theme_classic() 
+
+```
+
+Using the regression equation and substituting $x =$ `r eff_discharge$discharge_mean`, RI of the effective discharge is `r ri_ed`. In @fig-rec-int, extrapolating the regression allows us to estimate RI for the effective discharge: the vertical dotted line represents the mean discharge of the effective discharge class, and the horizontal dotted line represents its recurrence interval.
+
+12. Do the recurrence intervals estimated using the two methods above agree? Explain.
+
+Yes, because the exponential regression (defined by the equation) is what is used to generate the trendline in @fig-rec-int. 
+
