@@ -1577,8 +1577,370 @@ Convex slopes usually not prone to mass wasting, they simply diverge/push materi
         - Do not migrate, arms anchored by vegetation
         - Erodible substrate (U-shaped "blowout")
         - Common on coastlines
+    - **Transverse:** dune crest (linear ridge) perpendicular to wind direction
+        - Abundant sand-supply (coalescence of barchans)
+        - Unidirectional winds
+        - May or may not be anchored by vegetation
+        - If ridge less linear, more wavy, considered barchanoid
+    - **Longitudinal:** linear ridges oriented parallel to wind direction
+    - **Star:** multiple arms from multidirectional winds
     
-
 ![](pics/dune_classification.jpg)
 
-- **Ergs:**
+![](pics/dune_forms_factors.jpg)
+
+![Duran & Herrmann 2006, Phys. Rev. Letters](pics/dune_evol.jpg)
+
+- **Ergs:** ?
+
+# Coastal Geomorphology
+
+**2026-11-06**
+
+- Coastal morphology largely controlled by tectonic setting
+- Sea-level change also controls base level and potential for landscape denudation
+- Other factors:
+    - River inputs (freshwater & sediment)
+        - ? Estuary: river without much sediment, just valley with water mixing ?
+    - Tidal range
+    - Wave action
+- Active continental margins
+    - Along continental plate margin that is convergent or transform with an oceanic plate (different plates along boundary)
+    - Commonly have tectonic activity (earthquakes, volcanoes, mountain building)
+    - Continental shelf generally narrow or does not exist (water depth rapidly increases away from coast)
+    - Sites of active erosion and weathering!
+    - West coast of USA
+- Passive continental margins
+    - Along continental plate margin not experiencing active tectonic forces (divergent)
+    - Deposition of large amounts of sediment (without tectonic forces)
+    - Wider continental shelf, low relief, shallow water
+    - Gulf and Atlantic coasts (divergence from Pangaea)
+
+![](pics/continental_margins.jpg)
+
+## Influence of sea level
+
+- Actual sea level change (**eustatic**)
+    - Amount of water storeda s glavial ice
+    - Temperature and salinity changing volume of water
+- Lifting or sinking of land surface (**isostatic**)
+    - Continental plate itself rising or falling
+    - Or, along coasts with sediment deposition, land subsides down
+- Shifting coastlines (without isostasy)
+    - Emergent: stretches of coast exposed by relative sea level fall
+    - Submergent: stretches inundated by water due to relative sea level rise
+    - Regression: increased glacial ice, cooling and contracting of water
+        - Coastlines migrate seaward (emergent), fluvial systems extend to reach the sea
+    - Transgression: melting glaciers, warming waters
+        - Coastlines migrate landward (submergent), fluvial systems drown
+- Balance between eustatic sea level change and sediment supply
+    - If SL rise = sediment supply, relative same coastline
+    - If SL rise > sediment supply, submergent
+    - If SL rise < sediment supply, emergent
+    - But depends on where sediment supply occurs; can maintain coast at mouth, but submerge away from mouth
+- **Continental shelf:** part of continent submerged in relatively shallow sea (100-200m deep), very flat, ends at a point of increased slope
+- **Continental slope:** steeper thans helf, transition zone between continental crust and oceanic crust
+    - Also driven by history (e.g., glacial periods)
+
+## Coastal processes
+
+- Wave regime (high or low energy, protected area or not)
+- Tides (tidal range, relative strength of tides & waves)
+- Rock resistance
+- Climate
+- Human impacts
+- Atmospheric winds
+
+### Waves
+
+![](pics/waves.jpg)
+
+- Friction between wind over ocean water and water
+- Drag on water, causes undulations of water surface (waves)
+- Origin: zone of strong winds associated with storms at sea, radiate outward in all directions
+- Wavelength, wave height (amplitude), period
+- Waves are mechanism of energy transfer
+    - Only small amount of water actually moves in direction of wave, but wave energy travels
+    - Wave energy: kinetic energy of orbital motion of water particles as wave passes by
+    - Separate from oceanic currents that actually do move water
+    - [Orbital motion of wave energy](https://www.youtube.com/watch?v=7yPTa8qi5X8)
+    - Wave base: distance below surface where no more wave energy felt (usually 1/2 of wavelength)
+- **Deep water:** when wave base above sea floor
+    - As waves move away from source zone in the Deep Ocean they spread out into smooth, rounded forms called swells
+- Shallow water:
+    - Water depth < wave base
+    - Friction between ocean floor affects orbital motion: wavelength becomes shorter, waves, start to bunch up, wave height increases
+    - Top part of wave moving faster than bottom
+    - Eventually over-steepends and **breaks**
+    - Spilling, plunging, surging breakers
+- Coastlines have uneven water depth, so certain parts of wave slow down faster than others, causes **wave bending (refraction)** to strike coast at subparallel angle
+    - Causes concentrated wave energy in headlands (erosion), and diffuse wave energy in coves/bays (deposition)
+    - Tends to straighten coastlines over time
+
+![](pics/wave_breaking.jpg)
+
+- Extreme waves
+    - **Storm surges:* large frontal storms, tropical storms or hurricanes *push* water inland because of strong winds (e.g., Hurricane Sandy)
+    - **Tsunami:** earthquake-generated displacement waves
+        - Wave motion reaches all the way to ocean floor even in deep water
+        - Really long wavelength, travel fast
+        - As approaches shore, shortens and increases in height
+        - Advances as massive wall of water far onto land
+        - Can produce dramatic change in coastal landscapes, especially eroding coast during outflow
+        - Can have multiple waves arriving many minutes apart (20-60 min)
+        - [Japan](https://www.youtube.com/watch?v=B01vktb2bj4&list=PL8A0FE8E47C9FCA90&index=3)
+        - [Landslide-caused](https://www.youtube.com/watch?v=_RMprH-4QC4&list=PLFF513AD10F64B864&index=3)
+
+![](pics/tsunami.jpg)
+
+## Coastal landforms
+
+![](pics/coastal_landforms.png)
+
+### Erosional coasts
+
+- Do not have to be active plate margins
+- Drop in relative sea level
+- Strong wave energy
+- High relief
+- Dominant feature: cliff
+    - Sea undercuts the cliff (wave-cut notching)
+    - Rockfall, landslides
+    - **Wave-cut platform:** flat surface standing slightly below water surface at high tide (as cliff retreats)
+    - Erosional remnants of cliffs: sea stacks, arches
+    - **Marine terrace:** wave-cut platforms uplifted above level of wave action (tectonic uplift of coast or drop in sea level)
+- Tide pools
+    - Form in irregularities on wave-cut platforms
+    - Protected from large predators
+    - Mini-ecosystems that can cope with daily fluctuations in temperature, salinity, oxygen
+- Even though deposition does exist, form of coarse gravel
+
+### Depositional coasts
+
+- Generally passive margins
+- High sediment input
+- Low wave energy
+- Gentle relief out to coast
+- Dominant feature: beach
+    - Defined as location along coast where sediment is in motion
+    - Beach ridge: ridge on landward side; zone of coastal dunes, often vegetated
+    - Berm: horizontal surface formed by deposition of sediment during backwash; produced by deposition on beach face; only inundated during storm surges
+    - Beach face: sloping surface partially submerged during high tide; swash zone
+    - Longshore bars: result of sediment transported offshore from beach face and berm 
+    
+![](pics/beach_morphology.jpg)
+
+- Beach drift:
+    - When waves are not parallel to the shore, water swashes up the beach face at an angle, then backwashes straight back down the slope of the beach face 
+    - **Beach/longshore drift** is the movement of beach sediment along the shoreline by swash and backwash
+- Spits: extended stretch of narrow beach formed
+- Tombolo: spit that connects mainland to an island
+- Lagoon: calm water in a bay sealed from the open sea by a spit that connects two sides of the bay (bay barrier)
+- Barrier Islands: linear islands separated from coast by a lagoon (salt marsh)
+    - Growth and separation of a spit
+    - Bar submergence of old beach ridge or topographic high
+    - Bar emergence or growth of offshore bar following strong storm
+    - (During last glacial period: Sea level ~120 m lower, ~60 – 150 km seaward)
+ 
+ ![](pics/beach_drift_landforms.png)
+ 
+ Man-made depositional features (structures to prevent longshore drift):
+ 
+ - Groin: rock walls perpendicular to coast that trap longshore drift sediment
+    - Results in erosion on downcurrent side of groin (because sediment blocked)
+    - So have to place a series
+- Jetties: parallel walls connecting backwater to open water; force water to move through to maintain current
+- Deltas: fan-shaped deposit of sediment where a river flows into a body of water (ocean, lake)
+    - Reduction of flow velocity results in deposition
+    - Characterized by distributaries
+    - Shape determined by dominant energy regime:
+        - Sediment input/river dominated: bird-foot--shaped (Mississippi)
+        - Wave-dominated
+        - Tide-dominated
+
+![](pics/delta_shapes.jpg)
+![](pics/delta_types.png)
+
+- **Delta avulsion/lobe-switching:** rapid relocation of main stem channel of delta to begin depositing in new area
+    - Node: upstream location where avulsions tend to occur; backwater length scale
+    - Atchafalaya River represents a "preferred" pathway for water/sediment delivery to coast (shorter length, higher energy gradient); so avulsion node is around Old River Control Structure (here, bed depth same as sea level; so in low discharge, saltwater comes in)
+
+![](pics/mississippi_backwater_curve.png)
+
+# Glacial & Periglacial Geomorphology
+
+**2026-11-13**
+
+- Glacier: body of moving ice formed on land by compaction and recrystallisation of snow
+    - Snow --> **firn** --> glacial ice (increases density)
+- Two requirements:
+    - Mass must be formed from accumulation and metamorphism of snow
+    - Ice must be moving (pull of gravity), either internally or as a sliding block
+- Very powerful at sculpting Earth's surface!
+- Involved in Hydrologic and Rock Cycles (leads to sedimentary rocks)
+- Most freshwater (ca. 77%) on Earth frozen in glaciers
+- Today, glaciers + ice sheets cover about 10% Earth's land surface
+
+![](pics/glacial_ice_formation.jpg)
+
+- In Antarctica, need about 80m accumulated snow to get glacial ice below
+- In Alaska (away from poles), roughly 13m
+- Where? High latitude or high elevation
+- How much time?
+    - Antarctica desert (< 8cm precipitation annually), so may take 1000 years
+    - Temperate climates have more precipitation, so just several years
+
+![](pics/snowline_dist.png)
+
+## Types of glaciers
+
+- Classification methods:
+    - Morphologic: cirque, valley, ice sheets; mountain ice sheets, piedmont glaciers
+    - Thermal: where form (temperate, polar)
+    - Dynamic (movement): active, passive, dead
+- Two general groups of glaciers (for further classification)
+    - Alpine glaciers
+        - In mountain ranges (mountain glacier)
+        - Cirque: in bowl-shaped depressions at head of valley
+        - Valley: confined within valley originated by fluvial activity
+        - Piedmont: towards end of valley, more lateral spread-out formation
+        - *Restricted to the mountain-valley systems*
+    - Continental glaciers
+        - Very large, not constrained by valley walls
+        - Extensive, continuous mass of ice; massive thickness (over a mile)
+        - Extant continental ice sheets: Greenland, Antarctica
+    - Ice cap & ice field
+        - Area < 50000 sq. km
+        - Interconnected valley glaciers
+        - Caps: completely covered, no peaks
+        - Fields: highest peaks stick out of ice
+        - Iceland, Alaska, Canada, Scandinavia
+
+![](pics/cirque_valley_glaciers.jpg)
+
+![](pics/glacier_types.jpg)
+
+## Glacier processes
+
+- Glacial Mass Balance: open systems; inputs (snow, rock), outputs (ice, meltwater, sediment)
+- More inputs --> glacial advance
+- More outputs --> glacial retreat
+- Here (advance/retreat), not the block of ice moving up and down; instead, terminus moves while upper limit stays fixed
+- **Accumulation Zone:** accumulation of ice exceeds loss of ice
+- **Ablation/Wastage Zone:** loss of ice (ablation = melting + sublimation) exceeds accumulation (snow + flow)
+- **Equilibrium line:** where accumulation = ablation (NOT snowline)
+
+![Glacier Mass Balance ([video](https://mediaplayer.pearsoncmg.com/assets/kjORjsRdd1X03zAbeSgWZswK5n9bRwQH))](pics/glacier_mass_balance.png)
+ 
+- Movement: basal slip (moving as block) or internal deformation (ductile, plastic)
+- Movement, especially internal deformation, produces cracks on surface called **crevasses**
+- Internal flow of valley glacier similar to fluvial (center, top)
+
+![](pics/water_phase_boundaries.jpg)
+
+- Pressure melting happens partly due to irregularities on Earth's surface
+- **Regelation:** variations in land surface cause variations in pressure, melting some ice during compression, and then refreezing (re-gel) in zones of low pressure
+- **Glacial plucking:** regelation on downslope side incorporates bedrock material into glacier (then transported)
+
+![](pics/glacial_plucking.jpg)
+
+![](pics/cold_warm_based_glaciers.jpg)
+
+## Glacial sediment
+
+- Supraglacial: on top (material shed from valley walls)
+- Subglacial: below (plucked bedrock, loose material)
+- Interglacial/englacial: within (buried by snow, moved upward through internal deformation)
+
+Other way to classify:
+
+- Drift: no sediment (large boulders)
+- Non-stratified: **till** (unsorted, angular particles, wide range of sizes, striated cobbles)
+- Stratified: **outwash** (well sorted, well rounded; sand and gravel, deposited by streams), **glaciolacustrine** (glacial lake sediments; clays and silts, mostly fine-grained material, varves [stratified layers of seasonal sedimentary rock])
+
+![](pics/glacial_outwash_plain.png)
+
+## Glacial erosion
+
+**2026-11-16**
+
+- Subglacil and englacial sediment: tools
+- Abrasion (scraping action): striations (continous movement), grooves (large/deep continuous movement), chattermarks/scars (slip-stick movement)
+    - Underlying rock is eroded through the grinding action of rock fragments incorporated in the base of the ice
+    - Striations thought to show direction of ice movement (misleading if minor)
+        - Striations on clasts: rock in glacier scraps against hard bedrock
+        - Striations on bedrock: soft bedrock scraped by rocks in glacier
+    - Ground up rock: **rock flour** (silt-sized sediment)
+        - Deposited at end of glacier, dries out, susceptible to wind transport
+- Plucking (quarrying): dislodgement/lifting, glacial erratics
+    - **Glacial erratics:** large rocks lying in strange locations, left behind by retreating glaciers, different rock type than underlying/neighbouring rock
+    - Originally thought to be due to drift
+
+### Alpine glacier landforms
+
+Erosional:
+
+- Glaciers occupy fluvial valleys under climate shift (fluvial --> glacial landscape)
+    - Preglacial, glacial, postglacial
+- U-shaped valleys (rivers make V-shaped): flat bottoms, steep walls
+
+![](pics/alpine_glacier_pre.jpg) ![](pics/alpine_glacier_dur.jpg) ![](pics/alpine_glacier_post.jpg)
+
+- Previously glaciated mountains have a jagged, rugged look, with sharp peaks called **“Horns”** and knife-edge ridges called **“Aretes”**
+- Alpine glaciers originate in bowl-shaped depressions called **“cirques”**, which can contain lakes after the glaciers are gone
+- **Hanging valleys** form where a “tributary” glacier feeds into the main glacier. When the glaciers melt, the base of U-shaped valley of the tributary glacier is at a higher elevation than that of the main glacier- it “hangs” above.
+- **Fjord:** flooded glacial valleys at coastlines (related to change in sea level during glaciation and postglaciation)
+
+Depositional:
+
+- **Moraine:** a deposit of till along the margins of a glacier *in the form of a ridge*
+    - Formed when glacier is at equilibrium (no advance or retreat, just constant conveyor belt)
+    - Terminal/Recessional: a ridge of till at the glacier’s farthest extent or where the glacier paused during recession
+    - Lateral: a ridge of till along the sides of the glacier
+    - Medial: ridge of till formed where two glaciers with lateral moraines join
+- **Outwash plain:** flat area of fluvial deposition by meltwater, forms downstream of the glacier’s farthest extent, consists of outwash
+
+### Continental glacier landforms
+
+- Lack the carved, rugged alpine features
+- Grinds away minor topographic features, leaves behind flat plain of till and outwash, lakes and deranged drainage
+- What's impressive is lateral extent/span
+- Mostly depositional
+
+- **Till plain:** flat plain of glacial sediments, dotted with other features like lakes, kames, eskers etc.
+    - Unlike ridge at equilibrium, non-equilibrium (advance or retreat) prevents ridge formation from sediment (till) deposition, so results in flatter "plain" deposition
+- **Terminal/Recessional moraine:** ridge of till located at the glaciers farthest extent or where it paused while receding
+- **Outwash plain:** flat plain of sediment deposited by meltwater.
+- **Esker:** curving. narrow ridge of sand and gravel deposited by a meltwater stream flowing beneath a glacier
+- **Drumlins:** teardrop shaped hills of till found on the till plains, blunt on upstream size and streamlined pointing downstream
+- **Whaleback hills:** rounded asymmetrical hills formed by abrasion on one side and plucking on the other side
+    - Contrast with drumlins
+    - These are erosional features
+- **Kettle lakes:** during glacial retreat, block of ice gets left behind, gets (partially) buried by outwash. When the ice melts it leaves behind a depression that can be filled with water forming a lake
+    - Minnesota: land of 10000 lakes
+
+## Periglacial geomorphology
+
+![](pics/periglacial_dist.png)
+
+- Landscapes that are cold, but no glaciers (cold weather geomorphology)
+- 1909: Polish geologist Lozinski proposes periglacial to describe landscapes dominated by frost-action weathering and freeze-thaw (Carpathian Mountains)
+- About 20% Earth's land surface fits this category
+- High latitudes, high elevation
+- Climate regimes:
+    - Tundra: characteristic vegetation of high latitudes and high elevations, plant growth restricted by cold temperatures
+        - Land under snow cover 8-10 months
+    - Permafrost: soil, sediment, rock temperatures remain below 0C for at least 2 years
+        - Not covered by glaciers, so periglacial
+        - Largest permafrost unglaciated is Russia (Siberia)
+        - ~80% of Alaska is permafrost
+        - Only temperature relevant, not water
+- Types of permafrost
+    - Continuous: frozen perennially; average depth 400m, can exceed 1000m
+    - Discontinuous: unconnected patches that gradually coalesce; slope aspect influences permafrost presence (in N Hem, S-slopes too warm)
+
+![](pics/periglacial_cs.jpg)
+
+- Permafrost behaviour
+    - Active layer: zone of seasonally frozen ground that exists between the subsurface permafrost layer and the ground surface (subject to daily/seasonal freeze-thaw cycles)
+
