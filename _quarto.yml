@@ -12,6 +12,7 @@ website:
         text: Home
       - class-notes.qmd
       - lab.qmd
+      - exams.qmd
 
 number-sections: true
 format:

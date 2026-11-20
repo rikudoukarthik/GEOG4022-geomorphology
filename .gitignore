@@ -6,3 +6,5 @@
 *.docx
 slides/*
 /.quarto/
+
+**/*.quarto_ipynb

@@ -1,0 +1,16 @@
+---
+title: "Exams"
+editor_options: 
+  chunk_output_type: console
+format: 
+  html:
+    number-sections: false
+---
+
+## Mid-term exam
+
+**2026-10-23**
+
+One of the last-ever written examinations of my life:
+
+{{< pdf exams/GEOG4022G_Midterm.pdf height="1000px">}}
