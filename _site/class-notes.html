@@ -2,17 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.11.9">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>Class notes – GEOG 4022: Geomorphology</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -32,14 +38,15 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="./">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6b3bef205c96c4f74d1e1b8d3d254fec.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-a450253896b7a9bbcd93565e4db5b94a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -82,7 +89,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -101,19 +108,18 @@ window.Quarto = {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">GEOG 4022: Geomorphology</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -130,10 +136,15 @@ window.Quarto = {
     <a class="nav-link" href="./lab.html"> 
 <span class="menu-text">Lab notes</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./exams.html"> 
+<span class="menu-text">Exams</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
 </div>
+            <div id="quarto-search" class="" title="Search"></div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -142,7 +153,7 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
@@ -331,13 +342,18 @@ window.Quarto = {
   <li><a href="#alpine-glacier-landforms" id="toc-alpine-glacier-landforms" class="nav-link" data-scroll-target="#alpine-glacier-landforms"><span class="header-section-number">13.4.1</span> Alpine glacier landforms</a></li>
   <li><a href="#continental-glacier-landforms" id="toc-continental-glacier-landforms" class="nav-link" data-scroll-target="#continental-glacier-landforms"><span class="header-section-number">13.4.2</span> Continental glacier landforms</a></li>
   </ul></li>
-  <li><a href="#periglacial-geomorphology" id="toc-periglacial-geomorphology" class="nav-link" data-scroll-target="#periglacial-geomorphology"><span class="header-section-number">13.5</span> Periglacial geomorphology</a></li>
+  <li><a href="#periglacial-geomorphology" id="toc-periglacial-geomorphology" class="nav-link" data-scroll-target="#periglacial-geomorphology"><span class="header-section-number">13.5</span> Periglacial geomorphology</a>
+  <ul class="collapse">
+  <li><a href="#periglacial-processes" id="toc-periglacial-processes" class="nav-link" data-scroll-target="#periglacial-processes"><span class="header-section-number">13.5.1</span> Periglacial processes</a></li>
+  <li><a href="#periglacial-features" id="toc-periglacial-features" class="nav-link" data-scroll-target="#periglacial-features"><span class="header-section-number">13.5.2</span> Periglacial features</a></li>
+  </ul></li>
+  <li><a href="#ice-ages-and-glaciations" id="toc-ice-ages-and-glaciations" class="nav-link" data-scroll-target="#ice-ages-and-glaciations"><span class="header-section-number">13.6</span> Ice Ages and glaciations</a></li>
   </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content" tabindex="-1">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -2095,13 +2111,13 @@ Fr = \frac{U}{\sqrt{gH}}
 </ul></li>
 </ul>
 <p><img src="pics/floodplain_construction.jpg" class="img-fluid"></p>
-<div class="callout callout-style-default callout-tip callout-titled" title="Alluvium and regolith">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Alluvium and regolith
+<span class="screen-reader-only">Tip</span>Alluvium and regolith
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -2753,24 +2769,30 @@ F = \frac{Shear\ Strength}{Shear\ Stress}
 </section>
 <section id="glacial-sediment" class="level2" data-number="13.3">
 <h2 data-number="13.3" class="anchored" data-anchor-id="glacial-sediment"><span class="header-section-number">13.3</span> Glacial sediment</h2>
+<p>Categories of sediment being actively moved by glacier:</p>
 <ul>
 <li>Supraglacial: on top (material shed from valley walls)</li>
 <li>Subglacial: below (plucked bedrock, loose material)</li>
 <li>Interglacial/englacial: within (buried by snow, moved upward through internal deformation)</li>
 </ul>
-<p>Other way to classify:</p>
+<p>Other classification defining the 3 main types of glacial sediment deposits:</p>
 <ul>
 <li>Drift: no sediment (large boulders)</li>
 <li>Non-stratified: <strong>till</strong> (unsorted, angular particles, wide range of sizes, striated cobbles)</li>
 <li>Stratified: <strong>outwash</strong> (well sorted, well rounded; sand and gravel, deposited by streams), <strong>glaciolacustrine</strong> (glacial lake sediments; clays and silts, mostly fine-grained material, varves [stratified layers of seasonal sedimentary rock])</li>
 </ul>
-<p><img src="pics/glacial_outwash_plain.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/glacial_outwash_plain.png" class="img-fluid figure-img"></p>
+<figcaption>Outwash turning into glaciolacustrine sediment.</figcaption>
+</figure>
+</div>
 </section>
 <section id="glacial-erosion" class="level2" data-number="13.4">
 <h2 data-number="13.4" class="anchored" data-anchor-id="glacial-erosion"><span class="header-section-number">13.4</span> Glacial erosion</h2>
 <p><strong>2026-11-16</strong></p>
 <ul>
-<li>Subglacil and englacial sediment: tools</li>
+<li>Subglacial and englacial sediment: tools</li>
 <li>Abrasion (scraping action): striations (continous movement), grooves (large/deep continuous movement), chattermarks/scars (slip-stick movement)
 <ul>
 <li>Underlying rock is eroded through the grinding action of rock fragments incorporated in the base of the ice</li>
@@ -2822,24 +2844,27 @@ F = \frac{Shear\ Strength}{Shear\ Stress}
 <section id="continental-glacier-landforms" class="level3" data-number="13.4.2">
 <h3 data-number="13.4.2" class="anchored" data-anchor-id="continental-glacier-landforms"><span class="header-section-number">13.4.2</span> Continental glacier landforms</h3>
 <ul>
-<li><p>Lack the carved, rugged alpine features</p></li>
-<li><p>Grinds away minor topographic features, leaves behind flat plain of till and outwash, lakes and deranged drainage</p></li>
-<li><p>What’s impressive is lateral extent/span</p></li>
-<li><p>Mostly depositional</p></li>
-<li><p><strong>Till plain:</strong> flat plain of glacial sediments, dotted with other features like lakes, kames, eskers etc.</p>
+<li>Lack the carved, rugged alpine features</li>
+<li>Grinds away minor topographic features, leaves behind flat plain of till and outwash, lakes and deranged drainage</li>
+<li>What’s impressive is lateral extent/span</li>
+<li>Mostly depositional</li>
+</ul>
+<p>Landforms:</p>
+<ul>
+<li><strong>Till plain:</strong> flat plain of glacial sediments, dotted with other features like lakes, kames, eskers etc.
 <ul>
 <li>Unlike ridge at equilibrium, non-equilibrium (advance or retreat) prevents ridge formation from sediment (till) deposition, so results in flatter “plain” deposition</li>
 </ul></li>
-<li><p><strong>Terminal/Recessional moraine:</strong> ridge of till located at the glaciers farthest extent or where it paused while receding</p></li>
-<li><p><strong>Outwash plain:</strong> flat plain of sediment deposited by meltwater.</p></li>
-<li><p><strong>Esker:</strong> curving. narrow ridge of sand and gravel deposited by a meltwater stream flowing beneath a glacier</p></li>
-<li><p><strong>Drumlins:</strong> teardrop shaped hills of till found on the till plains, blunt on upstream size and streamlined pointing downstream</p></li>
-<li><p><strong>Whaleback hills:</strong> rounded asymmetrical hills formed by abrasion on one side and plucking on the other side</p>
+<li><strong>Terminal/Recessional moraine:</strong> ridge of till located at the glaciers farthest extent or where it paused while receding</li>
+<li><strong>Outwash plain:</strong> flat plain of sediment deposited by meltwater.</li>
+<li><strong>Esker:</strong> curving. narrow ridge of sand and gravel deposited by a meltwater stream flowing beneath a glacier</li>
+<li><strong>Drumlins:</strong> teardrop shaped hills of till found on the till plains, blunt on upstream size and streamlined pointing downstream</li>
+<li><strong>Whaleback hills:</strong> rounded asymmetrical hills formed by abrasion on one side and plucking on the other side
 <ul>
 <li>Contrast with drumlins</li>
 <li>These are erosional features</li>
 </ul></li>
-<li><p><strong>Kettle lakes:</strong> during glacial retreat, block of ice gets left behind, gets (partially) buried by outwash. When the ice melts it leaves behind a depression that can be filled with water forming a lake</p>
+<li><strong>Kettle lakes:</strong> during glacial retreat, block of ice gets left behind, gets (partially) buried by outwash. When the ice melts it leaves behind a depression that can be filled with water forming a lake
 <ul>
 <li>Minnesota: land of 10000 lakes</li>
 </ul></li>
@@ -2878,9 +2903,92 @@ F = \frac{Shear\ Strength}{Shear\ Stress}
 <ul>
 <li>Permafrost behaviour
 <ul>
-<li>Active layer: zone of seasonally frozen ground that exists between the subsurface permafrost layer and the ground surface (subject to daily/seasonal freeze-thaw cycles)</li>
+<li><strong>Active layer:</strong> zone of seasonally frozen ground that exists between the subsurface permafrost layer and the ground surface (subject to daily/seasonal freeze-thaw cycles)</li>
+<li><strong>Talik:</strong> area of unfrozen ground</li>
+<li>Warming temperatures:
+<ul>
+<li>More disruption, infrastructure damage</li>
+<li>In discontinuous permafrost regions, thawing open subsurface drainage, producing disappearing lakes</li>
+<li>In continuous permafrost regions, soils thaw, forming new lakes (<strong>thermokarst/thaw lakes</strong>)</li>
+</ul></li>
 </ul></li>
 </ul>
+<p><strong>2026-11-18</strong> (missed lecture)</p>
+<section id="periglacial-processes" class="level3" data-number="13.5.1">
+<h3 data-number="13.5.1" class="anchored" data-anchor-id="periglacial-processes"><span class="header-section-number">13.5.1</span> Periglacial processes</h3>
+<ul>
+<li><strong>Ground ice:</strong> frozen subsurface water; frost action</li>
+<li>Strong physical (mechanical) weathering since water expands about 9% when it freezes
+<ul>
+<li><strong>Frost heaving:</strong> vertical movement of soils and rock</li>
+<li><strong>Frost thrusting:</strong> horizontal movement of soils and rock</li>
+</ul></li>
+<li>Gelifluction</li>
+</ul>
+</section>
+<section id="periglacial-features" class="level3" data-number="13.5.2">
+<h3 data-number="13.5.2" class="anchored" data-anchor-id="periglacial-features"><span class="header-section-number">13.5.2</span> Periglacial features</h3>
+<ul>
+<li>Ice wedge</li>
+<li>Patterned ground
+<ul>
+<li>Polygons
+<ul>
+<li><strong>Thermal contraction polygons</strong>: cracking, ice wedges</li>
+<li>Freeze-thaw cycles move soil/sediment into polygonal shapes; centers of polygons filled with either coarse-grained sediment (stones) or fine-grained soil</li>
+</ul></li>
+<li>Stone/soil circles: Slow soil convection driven by temperature contrast</li>
+</ul></li>
+<li>Pingo: relatively small hills and mounds</li>
+<li>Rock glacier
+<ul>
+<li>Morphologically similar to ice glaciers</li>
+<li>Mostly in high alpine valleys</li>
+<li>Coarse rock debris frozen together by interstitial ice</li>
+</ul></li>
+<li>Blockfield
+<ul>
+<li>Accumulation of moderate–large angular rocks, either concentrated in valleys or spread across wide areas</li>
+<li>Not produced through mass movement, instead in-place weathering from frost wedging</li>
+</ul></li>
+</ul>
+<p><img src="pics/periglacial_ice_wedge.jpg" class="img-fluid"></p>
+<p><img src="pics/periglacial_patterned_ground.jpg" class="img-fluid"></p>
+<p><img src="pics/periglacial_pingo.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="ice-ages-and-glaciations" class="level2" data-number="13.6">
+<h2 data-number="13.6" class="anchored" data-anchor-id="ice-ages-and-glaciations"><span class="header-section-number">13.6</span> Ice Ages and glaciations</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/last_ice_age.jpg" class="img-fluid figure-img"></p>
+<figcaption>Ice extent at ~ 18000 ya</figcaption>
+</figure>
+</div>
+<ul>
+<li>Pleistocene Epoch (~2.5 Ma–10000 ya)</li>
+<li>Third of Earth’s land surface covered by ice sheets and glaciers: Canada, northern US Midwest, northern Europe</li>
+<li>Up to 2 mile thickness</li>
+<li><strong>Ice Age:</strong> extended periods of geologic time dominated by cold climates; includes periods of brief warming temperatures called <em>interglacials</em></li>
+</ul>
+<p><img src="pics/last_ice_age_na_18kya.png" class="img-fluid" style="width:49.0%"> <img src="pics/last_ice_age_na_9kya.png" class="img-fluid" style="width:49.0%"></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wbsURVgoRD0?si=UCvptAZnFJw0o5_W" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+<ul>
+<li>What causes Ice Ages?
+<ul>
+<li>Plate tectonics: position of land masses and ocean currents</li>
+<li><strong>Milankovitch Theory:</strong> variations in Earth’s orbit produce variations in incoming solar radiation (climates fluctuate)
+<ul>
+<li>Circular to elliptical, every 100,000 years or so; elliptical favours interglacial, more melting</li>
+<li>Axial tilt: 21.5–24.5 deg, every 41,000 years or so; lower tilt favours glacial, less polar melting</li>
+<li><strong>Precession</strong> (wobbling of axis; <a href="https://youtu.be/0qHjtp4cdCA?si=eoIngknxsVelZI0C">video</a>): like a spinning top, 26,000 years or so to complete cycle</li>
+</ul></li>
+</ul></li>
+</ul>
+<p><img src="pics/milankovitch_theory.png" class="img-fluid"></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6lbJrvtxWNE?si=2mmYZPvUp0YikcH5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
 
 
 </section>
@@ -2938,13 +3046,14 @@ F = \frac{Shear\ Strength}{Shear\ Stress}
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -2964,7 +3073,8 @@ F = \frac{Shear\ Strength}{Shear\ Stress}
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
       // Inspect non-navigation links and adorn them if external
-     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
       for (var i=0; i<links.length; i++) {
         const link = links[i];
         if (!isInternal(link.href)) {
@@ -2973,8 +3083,69 @@ F = \frac{Shear\ Strength}{Shear\ Stress}
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+          if (!link.classList.contains('no-external-icon')) {
+          }
         }
       }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
       const config = {
         allowHTML: true,
@@ -2988,6 +3159,7 @@ F = \frac{Shear\ Strength}{Shear\ Stress}
         interactiveBorder: 10,
         theme: 'quarto',
         placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
       };
       if (contentFn) {
         config.content = contentFn;
@@ -3150,44 +3322,54 @@ F = \frac{Shear\ Strength}{Shear\ Stress}
           const lineIds = lines.map((line) => {
             return targetCell + "-" + line;
           })
-          let top = null;
-          let height = null;
-          let parent = null;
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
           if (lineIds.length > 0) {
-              //compute the position of the single el (top and bottom and make a div)
-              const el = window.document.getElementById(lineIds[0]);
-              top = el.offsetTop;
-              height = el.offsetHeight;
-              parent = el.parentElement.parentElement;
-            if (lineIds.length > 1) {
-              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-              height = bottom - top;
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
             }
-            if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
-              let div = window.document.getElementById("code-annotation-line-highlight");
-              if (div === null) {
-                div = window.document.createElement("div");
-                div.setAttribute("id", "code-annotation-line-highlight");
-                div.style.position = 'absolute';
-                parent.appendChild(div);
-              }
-              div.style.top = top - 2 + "px";
-              div.style.height = height + 4 + "px";
-              div.style.left = 0;
-              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-              if (gutterDiv === null) {
-                gutterDiv = window.document.createElement("div");
-                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-                gutterDiv.style.position = 'absolute';
-                const codeCell = window.document.getElementById(targetCell);
-                const gutter = codeCell.querySelector('.code-annotation-gutter');
-                gutter.appendChild(gutterDiv);
-              }
-              gutterDiv.style.top = top - 2 + "px";
-              gutterDiv.style.height = height + 4 + "px";
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
             }
+            placeBand(gutterDiv, el, lastEl);
             selectedAnnoteEl = annoteEl;
           }
         };
@@ -3285,6 +3467,9 @@ F = \frac{Shear\ Strength}{Shear\ Stress}
       }
     }
   });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
   </script>
 </div> <!-- /content -->
 

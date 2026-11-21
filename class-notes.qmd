@@ -1848,23 +1848,25 @@ Convex slopes usually not prone to mass wasting, they simply diverge/push materi
 
 ## Glacial sediment
 
+Categories of sediment being actively moved by glacier:
+
 - Supraglacial: on top (material shed from valley walls)
 - Subglacial: below (plucked bedrock, loose material)
 - Interglacial/englacial: within (buried by snow, moved upward through internal deformation)
 
-Other way to classify:
+Other classification defining the 3 main types of glacial sediment deposits:
 
 - Drift: no sediment (large boulders)
 - Non-stratified: **till** (unsorted, angular particles, wide range of sizes, striated cobbles)
 - Stratified: **outwash** (well sorted, well rounded; sand and gravel, deposited by streams), **glaciolacustrine** (glacial lake sediments; clays and silts, mostly fine-grained material, varves [stratified layers of seasonal sedimentary rock])
 
-![](pics/glacial_outwash_plain.png)
+![Outwash turning into glaciolacustrine sediment.](pics/glacial_outwash_plain.png)
 
 ## Glacial erosion
 
 **2026-11-16**
 
-- Subglacil and englacial sediment: tools
+- Subglacial and englacial sediment: tools
 - Abrasion (scraping action): striations (continous movement), grooves (large/deep continuous movement), chattermarks/scars (slip-stick movement)
     - Underlying rock is eroded through the grinding action of rock fragments incorporated in the base of the ice
     - Striations thought to show direction of ice movement (misleading if minor)
@@ -1907,6 +1909,8 @@ Depositional:
 - What's impressive is lateral extent/span
 - Mostly depositional
 
+Landforms:
+
 - **Till plain:** flat plain of glacial sediments, dotted with other features like lakes, kames, eskers etc.
     - Unlike ridge at equilibrium, non-equilibrium (advance or retreat) prevents ridge formation from sediment (till) deposition, so results in flatter "plain" deposition
 - **Terminal/Recessional moraine:** ridge of till located at the glaciers farthest extent or where it paused while receding
@@ -1942,5 +1946,66 @@ Depositional:
 ![](pics/periglacial_cs.jpg)
 
 - Permafrost behaviour
-    - Active layer: zone of seasonally frozen ground that exists between the subsurface permafrost layer and the ground surface (subject to daily/seasonal freeze-thaw cycles)
+    - **Active layer:** zone of seasonally frozen ground that exists between the subsurface permafrost layer and the ground surface (subject to daily/seasonal freeze-thaw cycles)
+    - **Talik:** area of unfrozen ground
+    - Warming temperatures:
+        - More disruption, infrastructure damage
+        - In discontinuous permafrost regions, thawing open subsurface drainage, producing disappearing lakes
+        - In continuous permafrost regions, soils thaw, forming new lakes (**thermokarst/thaw lakes**)
 
+**2026-11-18** (missed lecture)
+
+### Periglacial processes
+
+- **Ground ice:** frozen subsurface water; frost action
+- Strong physical (mechanical) weathering since water expands about 9% when it freezes
+    - **Frost heaving:** vertical movement of soils and rock
+    - **Frost thrusting:** horizontal movement of soils and rock
+- Gelifluction
+
+### Periglacial features
+
+- Ice wedge
+- Patterned ground
+    - Polygons
+        - **Thermal contraction polygons**: cracking, ice wedges
+        - Freeze-thaw cycles move soil/sediment into polygonal shapes; centers of polygons filled with either coarse-grained sediment (stones) or fine-grained soil
+    - Stone/soil circles: Slow soil convection driven by temperature contrast
+- Pingo: relatively small hills and mounds
+- Rock glacier
+    - Morphologically similar to ice glaciers
+    - Mostly in high alpine valleys
+    - Coarse rock debris frozen together by interstitial ice
+- Blockfield
+    - Accumulation of moderate--large angular rocks, either concentrated in valleys or spread across wide areas
+    - Not produced through mass movement, instead in-place weathering from frost wedging
+
+![](pics/periglacial_ice_wedge.jpg)
+
+![](pics/periglacial_patterned_ground.jpg)
+
+![](pics/periglacial_pingo.png)
+
+## Ice Ages and glaciations
+
+![Ice extent at ~ 18000 ya](pics/last_ice_age.jpg)
+
+- Pleistocene Epoch (~2.5 Ma--10000 ya)
+- Third of Earth's land surface covered by ice sheets and glaciers: Canada, northern US Midwest, northern Europe
+- Up to 2 mile thickness
+- **Ice Age:** extended periods of geologic time dominated by cold climates; includes periods of brief warming temperatures called *interglacials*
+
+![](pics/last_ice_age_na_18kya.png){width="49%"} ![](pics/last_ice_age_na_9kya.png){width="49%"}
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wbsURVgoRD0?si=UCvptAZnFJw0o5_W" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+- What causes Ice Ages?
+    - Plate tectonics: position of land masses and ocean currents
+    - **Milankovitch Theory:** variations in Earth's orbit produce variations in incoming solar radiation (climates fluctuate)
+        - Circular to elliptical, every 100,000 years or so; elliptical favours interglacial, more melting 
+        - Axial tilt: 21.5--24.5 deg, every 41,000 years or so; lower tilt favours glacial, less polar melting
+        - **Precession** (wobbling of axis; [video](https://youtu.be/0qHjtp4cdCA?si=eoIngknxsVelZI0C)): like a spinning top, 26,000 years or so to complete cycle
+
+![](pics/milankovitch_theory.png)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6lbJrvtxWNE?si=2mmYZPvUp0YikcH5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
